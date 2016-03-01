@@ -1,14 +1,14 @@
-var jsonServer = require('json-server')
+const jsonServer = require('json-server')
 
-var films = require('./films.json');
-var people = require('./people.json');
-var planets = require('./planets.json');
-var species = require('./species.json');
-var starships = require('./starships.json');
-var transport = require('./transport.json');
-var vehicles = require('./vehicles.json');
+const films = require('./films.json');
+const people = require('./people.json');
+const planets = require('./planets.json');
+const species = require('./species.json');
+const starships = require('./starships.json');
+const transport = require('./transport.json');
+const vehicles = require('./vehicles.json');
 
-var db = {
+const db = {
     films,
     people,
     planets,
@@ -32,10 +32,10 @@ const formattedDb = Object.keys(db).reduce((acc, current)=>{
 }, {})
 
 
-var server = jsonServer.create()
+const server = jsonServer.create()
 server.use(jsonServer.defaults())
 
-var router = jsonServer.router(formattedDb);
+const router = jsonServer.router(formattedDb);
 server.use(router)
 
 server.listen(3000)
