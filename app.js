@@ -23,7 +23,7 @@ const db = {
  * Lifting the "fields" to the root of the object
  * Using the "pk" as the "id"
  */
-var fdb = Object.keys(db).reduce((acc, current) => {
+const fdb = Object.keys(db).reduce((acc, current) => {
     acc[current] = db[current].map((item) => {
         return Object.assign(
             item.fields,
@@ -34,7 +34,28 @@ var fdb = Object.keys(db).reduce((acc, current) => {
     return acc;
 }, {});
 
-/***
+/**
+ * Vehicles and Starships "extend" Transport...
+ */
+
+const xdb = Object.keys(fdb).reduce((acc, current)=>{
+    if(current === "starships" || current === "vehicles"){
+        acc[current] = acc[current].map((item)=>{
+            const transport = acc["transport"].find((elm)=>{                    
+                return elm.id === item.id;
+            });
+                        
+            if(transport){                
+                return Object.assign(item,transport)
+            }
+            
+            return item;            
+        })
+    }        
+    return acc;
+}, fdb)
+
+/**
  * Relation definitions to match them with swapi.co
  */
 const relations = [
@@ -90,7 +111,7 @@ const relationDb = relations.reduce((acc, current)=>{
         )
     });
     return acc;
-}, fdb)
+}, xdb)
 
 
 const server = jsonServer.create()
