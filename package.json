@@ -1,5 +1,9 @@
 {
   "name": "starwars-json-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnlindquist/swapi-json-server.git"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fs-extra": "^0.28.0",
     "json-server": "^0.8.8"
   }
 }

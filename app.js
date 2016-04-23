@@ -29,7 +29,7 @@ const fdb = Object.keys(db).reduce((acc, current) => {
             item.fields,
             { id: item.pk }
         );
-    })
+    });
 
     return acc;
 }, {});
