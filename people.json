@@ -606,7 +606,7 @@
 			"mass": "45",
 			"homeworld": 8,
 			"birth_year": "46BBY",
-			"image": "padmé_amidala.jpg"
+			"image": "padme_amidala.jpg"
 		},
 		"model": "resources.people",
 		"pk": 35
@@ -678,7 +678,7 @@
 			"mass": "unknown",
 			"homeworld": 8,
 			"birth_year": "unknown",
-			"image": "ric_olié.jpg"
+			"image": "ric_olie.jpg"
 		},
 		"model": "resources.people",
 		"pk": 39
@@ -1074,7 +1074,7 @@
 			"mass": "unknown",
 			"homeworld": 8,
 			"birth_year": "unknown",
-			"image": "cordé.jpg"
+			"image": "corde.jpg"
 		},
 		"model": "resources.people",
 		"pk": 61
@@ -1164,7 +1164,7 @@
 			"mass": "unknown",
 			"homeworld": 8,
 			"birth_year": "unknown",
-			"image": "dormé.jpg"
+			"image": "dorme.jpg"
 		},
 		"model": "resources.people",
 		"pk": 66
