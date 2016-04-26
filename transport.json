@@ -222,7 +222,7 @@
 			"model": "Twin Ion Engine Advanced x1",
 			"cost_in_credits": "unknown",
 			"manufacturer": "Sienar Fleet Systems",
-			"image": "tie_advanced x1.jpg"
+			"image": "tie_advanced_x1.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 13
@@ -355,7 +355,7 @@
 			"model": "Storm IV Twin-Pod",
 			"cost_in_credits": "75000",
 			"manufacturer": "Bespin Motors",
-			"image": "storm_iv twin-pod cloud car.jpg"
+			"image": "storm_iv_twin-pod_cloud_car.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 20
@@ -412,7 +412,7 @@
 			"model": "EF76 Nebulon-B escort frigate",
 			"cost_in_credits": "8500000",
 			"manufacturer": "Kuat Drive Yards",
-			"image": "ef76_nebulon-b escort frigate.jpg"
+			"image": "ef76_nebulon-b_escort_frigate.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 23
@@ -450,7 +450,7 @@
 			"model": "Bantha-II",
 			"cost_in_credits": "8000",
 			"manufacturer": "Ubrikkian Industries",
-			"image": "bantha-ii_cargo skiff.jpg"
+			"image": "bantha-ii_cargo_skiff.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 25
@@ -545,7 +545,7 @@
 			"model": "74-Z speeder bike",
 			"cost_in_credits": "8000",
 			"manufacturer": "Aratech Repulsor Company",
-			"image": "imperial_speeder bike.jpg"
+			"image": "imperial_speeder_bike.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 30
@@ -583,7 +583,7 @@
 			"model": "Lucrehulk-class Droid Control Ship",
 			"cost_in_credits": "unknown",
 			"manufacturer": "Hoersch-Kessel Drive, Inc.",
-			"image": "droid_control ship.jpg"
+			"image": "droid_control_ship.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 32
@@ -640,7 +640,7 @@
 			"model": "Armoured Assault Tank",
 			"cost_in_credits": "unknown",
 			"manufacturer": "Baktoid Armor Workshop",
-			"image": "armored_assault tank.jpg"
+			"image": "armored_assault_tank.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 35
@@ -659,7 +659,7 @@
 			"model": "Single Trooper Aerial Platform",
 			"cost_in_credits": "2500",
 			"manufacturer": "Baktoid Armor Workshop",
-			"image": "single_trooper aerial platform.jpg"
+			"image": "single_trooper_aerial_platform.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 36
@@ -678,7 +678,7 @@
 			"model": "C-9979 landing craft",
 			"cost_in_credits": "200000",
 			"manufacturer": "Haor Chall Engineering",
-			"image": "c-9979_landing craft.jpg"
+			"image": "c-9979_landing_craft.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 37
@@ -735,7 +735,7 @@
 			"model": "J-type 327 Nubian royal starship",
 			"cost_in_credits": "unknown",
 			"manufacturer": "Theed Palace Space Vessel Engineering Corps, Nubia Star Drives",
-			"image": "naboo_royal starship.jpg"
+			"image": "naboo_royal_starship.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 40
@@ -792,7 +792,7 @@
 			"model": "J-type diplomatic barge",
 			"cost_in_credits": "2000000",
 			"manufacturer": "Theed Palace Space Vessel Engineering Corps, Nubia Star Drives",
-			"image": "j-type_diplomatic barge.jpg"
+			"image": "j-type_diplomatic_barge.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 43
@@ -811,7 +811,7 @@
 			"model": "Zephyr-G swoop bike",
 			"cost_in_credits": "5750",
 			"manufacturer": "Mobquet Swoops and Speeders",
-			"image": "zephyr-g_swoop bike.jpg"
+			"image": "zephyr-g_swoop_bike.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 44
@@ -830,7 +830,7 @@
 			"model": "Koro-2 Exodrive airspeeder",
 			"cost_in_credits": "unknown",
 			"manufacturer": "Desler Gizh Outworld Mobility Corporation",
-			"image": "koro-2_exodrive airspeeder.jpg"
+			"image": "koro-2_exodrive_airspeeder.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 45
@@ -868,7 +868,7 @@
 			"model": "Botajef AA-9 Freighter-Liner",
 			"cost_in_credits": "unknown",
 			"manufacturer": "Botajef Shipyards",
-			"image": "aa-9_coruscant freighter.jpg"
+			"image": "aa-9_coruscant_freighter.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 47
@@ -906,7 +906,7 @@
 			"model": "H-type Nubian yacht",
 			"cost_in_credits": "unknown",
 			"manufacturer": "Theed Palace Space Vessel Engineering Corps",
-			"image": "h-type_nubian yacht.jpg"
+			"image": "h-type_nubian_yacht.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 49
@@ -963,7 +963,7 @@
 			"model": "Acclamator I-class assault ship",
 			"cost_in_credits": "unknown",
 			"manufacturer": "Rothana Heavy Engineering",
-			"image": "republic_assault ship.jpg"
+			"image": "republic_assault_ship.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 52
@@ -1096,7 +1096,7 @@
 			"model": "Providence-class carrier/destroyer",
 			"cost_in_credits": "125000000",
 			"manufacturer": "Rendili StarDrive, Free Dac Volunteers Engineering corps.",
-			"image": "trade_federation cruiser.jpg"
+			"image": "trade_federation_cruiser.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 59
@@ -1115,7 +1115,7 @@
 			"model": "Tsmeu-6 personal wheel bike",
 			"cost_in_credits": "15000",
 			"manufacturer": "Z-Gomot Ternbuell Guppat Corporation",
-			"image": "tsmeu-6_personal wheel bike.jpg"
+			"image": "tsmeu-6_personal_wheel_bike.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 60
@@ -1134,7 +1134,7 @@
 			"model": "Theta-class T-2c shuttle",
 			"cost_in_credits": "1000000",
 			"manufacturer": "Cygnus Spaceworks",
-			"image": "theta-class_t-2c shuttle.jpg"
+			"image": "theta-class_t-2c_shuttle.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 61
@@ -1172,7 +1172,7 @@
 			"model": "Senator-class Star Destroyer",
 			"cost_in_credits": "59000000",
 			"manufacturer": "Kuat Drive Yards, Allanteen Six shipyards",
-			"image": "republic_attack cruiser.jpg"
+			"image": "republic_attack_cruiser.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 63
@@ -1191,7 +1191,7 @@
 			"model": "J-type star skiff",
 			"cost_in_credits": "unknown",
 			"manufacturer": "Theed Palace Space Vessel Engineering Corps/Nubia Star Drives, Incorporated",
-			"image": "naboo_star skiff.jpg"
+			"image": "naboo_star_skiff.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 64
@@ -1267,7 +1267,7 @@
 			"model": "Munificent-class star frigate",
 			"cost_in_credits": "57000000",
 			"manufacturer": "Hoersch-Kessel Drive, Inc, Gwori Revolutionary Industries",
-			"image": "banking_clan frigte.jpg"
+			"image": "banking_clan_frigte.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 68
@@ -1286,7 +1286,7 @@
 			"model": "Oevvaor jet catamaran",
 			"cost_in_credits": "12125",
 			"manufacturer": "Appazanna Engineering Works",
-			"image": "oevvaor_jet catamaran.jpg"
+			"image": "oevvaor_jet_catamaran.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 69
@@ -1305,7 +1305,7 @@
 			"model": "Raddaugh Gnasp fluttercraft",
 			"cost_in_credits": "14750",
 			"manufacturer": "Appazanna Engineering Works",
-			"image": "raddaugh_gnasp fluttercraft.jpg"
+			"image": "raddaugh_gnasp_fluttercraft.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 70
@@ -1324,7 +1324,7 @@
 			"model": "HAVw A6 Juggernaut",
 			"cost_in_credits": "350000",
 			"manufacturer": "Kuat Drive Yards",
-			"image": "clone_turbo tank.jpg"
+			"image": "clone_turbo_tank.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 71
@@ -1343,7 +1343,7 @@
 			"model": "NR-N99 Persuader-class droid enforcer",
 			"cost_in_credits": "49000",
 			"manufacturer": "Techno Union",
-			"image": "corporate_alliance tank droid.jpg"
+			"image": "corporate_alliance_tank_droid.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 72
