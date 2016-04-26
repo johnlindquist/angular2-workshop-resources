@@ -120,7 +120,7 @@
 			"mass": "75",
 			"homeworld": 1,
 			"birth_year": "47BBY",
-			"image": "beru_whitesun lars.jpg"
+			"image": "beru_whitesun_lars.jpg"
 		},
 		"model": "resources.people",
 		"pk": 7
@@ -282,7 +282,7 @@
 			"mass": "1,358",
 			"homeworld": 24,
 			"birth_year": "600BBY",
-			"image": "jabba_desilijic tiure.jpg"
+			"image": "jabba_desilijic_tiure.jpg"
 		},
 		"model": "resources.people",
 		"pk": 16
@@ -318,7 +318,7 @@
 			"mass": "110",
 			"homeworld": 26,
 			"birth_year": "unknown",
-			"image": "jek_tono porkins.jpg"
+			"image": "jek_tono_porkins.jpg"
 		},
 		"model": "resources.people",
 		"pk": 19
@@ -516,7 +516,7 @@
 			"mass": "20",
 			"homeworld": 7,
 			"birth_year": "8BBY",
-			"image": "wicket_systri warrick.jpg"
+			"image": "wicket_systri_warrick.jpg"
 		},
 		"model": "resources.people",
 		"pk": 30
@@ -624,7 +624,7 @@
 			"mass": "66",
 			"homeworld": 8,
 			"birth_year": "52BBY",
-			"image": "jar_jar binks.jpg"
+			"image": "jar_jar_binks.jpg"
 		},
 		"model": "resources.people",
 		"pk": 36
@@ -1110,7 +1110,7 @@
 			"mass": "80",
 			"homeworld": 11,
 			"birth_year": "unknown",
-			"image": "poggle_the lesser.jpg"
+			"image": "poggle_the_lesser.jpg"
 		},
 		"model": "resources.people",
 		"pk": 63
@@ -1200,7 +1200,7 @@
 			"mass": "unknown",
 			"homeworld": 2,
 			"birth_year": "67BBY",
-			"image": "bail_prestor organa.jpg"
+			"image": "bail_prestor_organa.jpg"
 		},
 		"model": "resources.people",
 		"pk": 68

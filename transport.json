@@ -70,7 +70,7 @@
 			"model": "Sentinel-class landing craft",
 			"cost_in_credits": "240000",
 			"manufacturer": "Sienar Fleet Systems, Cyngus Spaceworks",
-			"image": "sentinel-class_landing craft.jpg"
+			"image": "sentinel-class_landing_craft.jpg"
 		},
 		"model": "resources.transport",
 		"pk": 5
