@@ -1,10 +1,10 @@
-const jsonServer = require('json-server')
+const jsonServer = require('json-server');
 
 const films = require('./films.json');
 const people = require('./people.json');
 const planets = require('./planets.json');
 const species = require('./species.json');
-const starships = require('./starships.json')
+const starships = require('./starships.json');
 const transport = require('./transport.json');
 const vehicles = require('./vehicles.json');
 
@@ -53,7 +53,7 @@ const xdb = Object.keys(fdb).reduce((acc, current)=>{
         })
     }        
     return acc;
-}, fdb)
+}, fdb);
 
 /**
  * Relation definitions to match them with swapi.co
@@ -90,14 +90,14 @@ function addRelation(db, host, relations) {
         if(relation.type === Number){
             acc[alias] = db[table]
                 .filter(item => item[name] === host.id)
-                .map(item => item.id)
+                .map(item => item.id);
                 
             return acc;                
         }
                 
         acc[alias] = db[table]
             .filter(item => item[name].indexOf(host.id) > -1)
-            .map(item => item.id)
+            .map(item => item.id);
 
         return acc;
     }, {})
@@ -111,13 +111,13 @@ const relationDb = relations.reduce((acc, current)=>{
         )
     });
     return acc;
-}, xdb)
+}, xdb);
 
 
-const server = jsonServer.create()
-server.use(jsonServer.defaults())
+const server = jsonServer.create();
+server.use(jsonServer.defaults());
 
 const router = jsonServer.router(relationDb);
-server.use(router)
+server.use(router);
 
-server.listen(3000)
+server.listen(4000);
