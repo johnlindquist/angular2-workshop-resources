@@ -1,0 +1,75 @@
+{
+  "name": "angular2book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "@ngrx/store": "^1.3.3",
+    "angular2": "^2.0.0-beta.15",
+    "bootstrap": "^4.0.0-alpha.2",
+    "es6-shim": "^0.35.0",
+    "express": "^4.13.4",
+    "gitbook-plugin-advanced-emoji": "^0.2.1",
+    "gitbook-plugin-copy-code-button": "0.0.2",
+    "gitbook-plugin-include-codeblock": "^1.7.0",
+    "gitbook-plugin-prism": "^1.0.0",
+    "json-server": "^0.8.10",
+    "moment": "^2.13.0",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.2",
+    "systemjs": "^0.19.25",
+    "ts-loader": "^0.8.2",
+    "webpack": "^1.13.0",
+    "webpack-target-electron-renderer": "^0.4.0",
+    "zone.js": "^0.6.10"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "chokidar": "^1.4.3",
+    "copyfiles": "^0.2.1",
+    "electron-builder": "3.11.0",
+    "fs-extra": "^0.26.7",
+    "recursive-readdir": "^1.3.0",
+    "rimraf": "^2.5.2",
+    "supervisor": "^0.10.0",
+    "systemjs-builder": "^0.15.14",
+    "typescript": "^1.8.9"
+  },
+  "scripts": {
+    "wp-build": "webpack ./app --progress --profile --colors --display-error-details --display-cached",
+    "wp-watch": "webpack ./app --watch --progress --profile --colors --display-error-details --display-cached",
+    "book": "gitbook serve --port 5000",
+    "book-build": "gitbook build ./",
+    "start": "node server",
+    "copy": "node copy",
+    "build-then-copy": "npm run book-build && npm run copy",
+    "swapi": "node ./swapi/index.js",
+    "postinstall": "install-app-deps",
+    "pack": "rimraf ./dist && build",
+    "dist": "rimraf ./dist && build",
+    "dist:win64": "rimraf ./dist && ./node_modules/.bin/build --platform win32 --arch x64"
+  },
+  "build": {
+    "app-bundle-id": "io.egghead.angular2book",
+    "app-category-type": "public.app-category.graphics-design",
+    "asar": false,
+    "iconUrl": "https://raw.githubusercontent.com/johnlindquist/icon/master/icon.ico",
+    "osx": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    }
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,468 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>03. Events and Refs · Angular 2 Workshop Handbook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Events are part of every application. Your user is going to click, type,
+resize, etc, etc, so you&#39;d better know how to accomodate them ! Events are handled by wrapping the event name inside of (). So if you
+want to handle a click on a button, you type:">
+        <meta name="generator" content="GitBook 3.0.0-pre.9">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../smart-and-dumb-components/" />
+    
+    
+    <link rel="prev" href="../first-component/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        
+        <nav role="navigation">
+            <ul class="summary">
+                
+                
+
+                
+
+                
+                    
+                    
+    
+        <li class="chapter " data-level="0" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="../new-project/">
+            
+                <a href="../new-project/">
+            
+                    
+                    00. New Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="../hello-world/">
+            
+                <a href="../hello-world/">
+            
+                    
+                    01. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="../first-component/">
+            
+                <a href="../first-component/">
+            
+                    
+                    02. First Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    03. Events and Refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="../smart-and-dumb-components/">
+            
+                <a href="../smart-and-dumb-components/">
+            
+                    
+                    04. Smart and Dumb Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="../built-in-directives/">
+            
+                <a href="../built-in-directives/">
+            
+                    
+                    05. Built-in Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="../ngFor/">
+            
+                <a href="../ngFor/">
+            
+                    
+                    06. Repeating Elements with ngFor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="../injecting-services/">
+            
+                <a href="../injecting-services/">
+            
+                    
+                    07. Injecting Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    08. Loading Data with Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+                
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                        Published with GitBook
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >03. Events and Refs</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="events-and-refs">Events and Refs</h1>
+<h2 id="tldr">TL;DR</h2>
+<ul>
+<li>Use <code>(click)=&quot;onClick($event)&quot;</code> to handle events in templates</li>
+<li>Use <code>(keyup.enter)=&quot;onEnter($event)</code> to handle key events</li>
+<li>Use <code>&lt;input #myInput&gt;</code> to reference elements in the template</li>
+</ul>
+<h2 id="handling-events">Handling Events</h2>
+<p>Events are part of every application. Your user is going to click, type,
+resize, etc, etc, so you&apos;d better know how to accomodate them <img align="absmiddle" alt=":wink:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/wink.png" title=":wink:">!</p>
+<p>Events are handled by wrapping the event name inside of <code>()</code>. So if you
+want to handle a <code>click</code> on a <code>button</code>, you type:</p>
+<pre><code class="lang-js"><span class="token operator">&lt;</span>button <span class="token punctuation">(</span>click<span class="token punctuation">)</span><span class="token operator">&gt;</span>
+</code></pre>
+<p>You add a &quot;handler&quot; for the event by assigning it a handler you&apos;ve
+defined in your component:</p>
+<blockquote>
+<p>In your <code>template</code></p>
+</blockquote>
+<pre><code class="lang-html">&lt;button (click)=&quot;onClick()&quot;&gt;Click Me!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<blockquote>
+<p>In your <code>Component</code></p>
+</blockquote>
+<pre><code class="lang-js"><span class="token function">onClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;clicked!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="the-event-object">The <code>$event</code> Object</h2>
+<p>To pass along the actual event, use <code>$event</code> in the handler</p>
+<blockquote>
+<p>In your <code>template</code></p>
+</blockquote>
+<pre><code class="lang-html">&lt;button (click)=&quot;onClick($event)&quot;&gt;Click Me!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<blockquote>
+<p>In your <code>Component</code></p>
+</blockquote>
+<pre><code class="lang-js"><span class="token function">onClick</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="keyboard-events">Keyboard Events</h2>
+<p>Want to know when a specific key was pressed? Check this out!</p>
+<pre><code class="lang-html">  &lt;input
+   (keyup.enter)=&quot;onEnter($event)&quot;
+   (keyup.esc)=&quot;onEscape($event)&quot;
+   (keyup.control.a)=&quot;onControlA($event)&quot;
+   (keyup.control.shift.l)=&quot;onControlShiftL($event)&quot;
+   &gt;
+</code></pre>
+<p>Add the keyboard combo using the syntax above will allow you filter out
+to only the specific keyboard event you want!:tada:</p>
+<h2 id="refs">Refs</h2>
+<p>You can reference values from elements in your template with a <code>ref</code>.
+You create a ref using <code>#</code> and a name on any element:</p>
+<pre><code class="lang-html">&lt;input #example&gt;
+</code></pre>
+<blockquote>
+<p>Elsewhere in the same template</p>
+</blockquote>
+<pre><code class="lang-html">{{example.value}}
+</code></pre>
+<h3 id="events-required-for-changes"><img align="absmiddle" alt=":warning:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:"> Events Required for Changes!</h3>
+<p>The above example will <em>not</em> automatically update! You need to have
+some sort of event firing for it to catch the update. Something as
+simple as adding a <code>(keyup)</code> will do the trick:</p>
+<pre><code class="lang-html">&lt;input #example (keyup)=&quot;noop&quot;&gt;
+</code></pre>
+<p>Obviously, the above could be handled better with <code>[(ngModel)]</code>
+(discussed later), but it&apos;s definitely good to know!</p>
+<h2 id="passing-ref-values-to-event-handlers">Passing <code>#ref</code> Values to Event Handlers</h2>
+<p>You can also grab that value off of the input and pass it along to a 
+<code>(click)</code> handler:</p>
+<pre><code class="lang-html">&lt;input #example&gt;
+&lt;button (click)=&quot;onClick(example.value)&quot;&gt;Click Me!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h2 id="show-me-the-code">Show Me the Code</h2>
+<blockquote>
+<p><code>src/components/example.component.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;example&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+            <span class="token operator">&lt;</span>input #myInput type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>button <span class="token punctuation">(</span>click<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">&quot;onClick(myInput.value)&quot;</span><span class="token operator">&gt;</span>Show Input Value<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+        `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Example</span><span class="token punctuation">{</span>
+    <span class="token function">onClick</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><code>src/app.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Example<span class="token punctuation">}</span> from <span class="token string">&apos;./components/example.component&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;app&apos;</span><span class="token punctuation">,</span>
+    directives<span class="token punctuation">:</span><span class="token punctuation">[</span>Example<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        <span class="token operator">&lt;</span>example<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>example<span class="token operator">&gt;</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="whats-that-syntax">What&apos;s That Syntax?</h2>
+<h3 id="click"><code>(click)</code></h3>
+<p>The <code>()</code> around and event name in a template indicate an Angular 2 event handler.</p>
+<h3 id="the-">The <code>#</code></h3>
+<p>The <code>#</code> marks an element to be looked up by other elements. Any value
+off of the element is available. You can even invoke methods on the
+element! Look how the following example focuses on the input when you
+click the button:</p>
+<pre><code class="lang-html">&lt;input #example&gt;
+&lt;button (click)=&quot;example.focus()&quot;&gt;Focus the Example Input<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+        </div>
+        <div class="no-results">
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../first-component/" class="navigation navigation-prev " aria-label="Previous page: 02. First Component">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../smart-and-dumb-components/" class="navigation navigation-next " aria-label="Next page: 04. Smart and Dumb Components">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Events are part of every application. Your user is going to click, type,\nresize, etc, etc, so you'd better know how to accomodate them ! Events are handled by wrapping the event name inside of (). So if you\nwant to handle a click on a button, you type:","title":"03. Events and Refs","next":{"level":"5","title":"04. Smart and Dumb Components","depth":1,"path":"smart-and-dumb-components/README.md","anchor":null},"previous":{"level":"3","title":"02. First Component","depth":1,"path":"first-component/README.md","anchor":null},"level":"4","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"events-and-refs/README.md","mtime":"2016-04-30T16:24:52.710Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-01T00:44:47.320Z","generator":"website"},"basePath":"..","book":{}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,415 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>06. Repeating Elements with ngFor · Angular 2 Workshop Handbook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="src/home/home.component.ts">
+        <meta name="generator" content="GitBook 3.0.0-pre.9">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../injecting-services/" />
+    
+    
+    <link rel="prev" href="../built-in-directives/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        
+        <nav role="navigation">
+            <ul class="summary">
+                
+                
+
+                
+
+                
+                    
+                    
+    
+        <li class="chapter " data-level="0" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="../new-project/">
+            
+                <a href="../new-project/">
+            
+                    
+                    00. New Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="../hello-world/">
+            
+                <a href="../hello-world/">
+            
+                    
+                    01. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="../first-component/">
+            
+                <a href="../first-component/">
+            
+                    
+                    02. First Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="../events-and-refs/">
+            
+                <a href="../events-and-refs/">
+            
+                    
+                    03. Events and Refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="../smart-and-dumb-components/">
+            
+                <a href="../smart-and-dumb-components/">
+            
+                    
+                    04. Smart and Dumb Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="../built-in-directives/">
+            
+                <a href="../built-in-directives/">
+            
+                    
+                    05. Built-in Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    06. Repeating Elements with ngFor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="../injecting-services/">
+            
+                <a href="../injecting-services/">
+            
+                    
+                    07. Injecting Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    08. Loading Data with Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+                
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                        Published with GitBook
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >06. Repeating Elements with ngFor</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="repeating-elements-with-ngfor">Repeating Elements with *ngFor</h1>
+<h2 id="tldr">TL;DR</h2>
+<ul>
+<li>New syntax <code>*ngFor=&quot;#person of people&quot;</code></li>
+</ul>
+<h2 id="gotchas"><img align="absmiddle" alt=":warning:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:"> Gotchas</h2>
+<ul>
+<li>It&apos;s <code>of</code>, not <code>in</code></li>
+<li>Remember the <code>#</code></li>
+</ul>
+<h2 id="show-me-the-code">Show Me the Code</h2>
+<blockquote>
+<p><code>src/home/home.component.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Person<span class="token punctuation">}</span> from <span class="token string">&apos;./components/person.component&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;home&apos;</span><span class="token punctuation">,</span>
+    directives<span class="token punctuation">:</span> <span class="token punctuation">[</span>Person<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>li <span class="token operator">*</span>ngFor<span class="token operator">=</span><span class="token string">&quot;#person of people&quot;</span><span class="token operator">&gt;</span>
+                <span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+
+        <span class="token operator">&lt;</span>person 
+            <span class="token operator">*</span>ngFor<span class="token operator">=</span><span class="token string">&quot;#person of people&quot;</span> 
+            <span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;person.name&quot;</span><span class="token operator">&gt;</span>            
+        <span class="token operator">&lt;</span><span class="token operator">/</span>person<span class="token operator">&gt;</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Home</span> <span class="token punctuation">{</span>
+    people <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">&quot;Sally&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">&quot;James&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">&quot;Percy&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">&quot;Claire&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">&quot;Izzie&quot;</span><span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><code>src/home/components/person.component.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">,</span> Input<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;person&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+        <span class="token punctuation">.</span>person<span class="token punctuation">{</span>
+            font<span class="token operator">-</span>family<span class="token punctuation">:</span> Helvetica<span class="token punctuation">,</span>serif<span class="token punctuation">;</span>
+            border<span class="token operator">-</span>top<span class="token punctuation">:</span> 2px dashed cornflowerblue<span class="token punctuation">;</span>
+            background<span class="token operator">-</span>color<span class="token punctuation">:</span> lightyellow<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;person&quot;</span><span class="token operator">&gt;</span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+    @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="whats-that-syntax">What&apos;s That Syntax?</h2>
+<h3 id="the--star">The <code>*</code> Star</h3>
+<p>The asterix/star/whatever you want to call it, represents a <code>template</code>
+element. In an <code>*ngFor</code>, the <code>*</code> means to &quot;use this element as a 
+template and repeat it&quot;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+        </div>
+        <div class="no-results">
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../built-in-directives/" class="navigation navigation-prev " aria-label="Previous page: 05. Built-in Directives">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../injecting-services/" class="navigation navigation-next " aria-label="Next page: 07. Injecting Services">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"src/home/home.component.ts","title":"06. Repeating Elements with ngFor","next":{"level":"8","title":"07. Injecting Services","depth":1,"path":"injecting-services/README.md","anchor":null},"previous":{"level":"6","title":"05. Built-in Directives","depth":1,"path":"built-in-directives/README.md","anchor":null},"level":"7","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ngFor/README.md","mtime":"2016-04-30T14:23:13.793Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-01T00:44:47.320Z","generator":"website"},"basePath":"..","book":{}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

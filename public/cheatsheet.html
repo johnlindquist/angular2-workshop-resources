@@ -1,0 +1,336 @@
+<div class="cheatsheet"><ngio-cheatsheet src="./guide/cheatsheet.json"><h2 class="ng-binding">Angular for TypeScript Cheat Sheet (v2.0.0-beta.17)</h2><br><!-- ngIf: !$ctrl.sections -->
+    <!-- ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Bootstrapping</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"><p><code>import {bootstrap} from 'angular2/platform/browser';</code>
+
+            </p>
+            </th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">bootstrap​(MyAppComponent,&nbsp;[MyService,&nbsp;<b>provide</b>(...)]);</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Bootstraps an application with MyAppComponent as the root component and configures the DI providers. </p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Template syntax</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"></th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;input&nbsp;<b>[value]</b>="firstName"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds property <code>value</code> to the result of expression <code>firstName</code>.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;div&nbsp;<b>[attr.role]</b>="myAriaRole"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds attribute <code>role</code> to the result of expression <code>myAriaRole</code>.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;div&nbsp;<b>[class.extra-sparkle]</b>="isDelightful"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds the presence of the CSS class <code>extra-sparkle</code> on the element to the truthiness of the expression <code>isDelightful</code>.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;div&nbsp;<b>[style.width.px]</b>="mySize"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds style property <code>width</code> to the result of expression <code>mySize</code> in pixels. Units are optional.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;button&nbsp;<b>(click)</b>="readRainbow($event)"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Calls method <code>readRainbow</code> when a click event is triggered on this button element (or its children) and passes in the event object.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;div&nbsp;title="Hello&nbsp;<b>{{ponyName}}</b>"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds a property to an interpolated string, e.g. "Hello Seabiscuit". Equivalent to:
+                <code>&lt;div [title]="'Hello' + ponyName"&gt;</code></p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;p&gt;Hello&nbsp;<b>{{ponyName}}</b>&lt;/p&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds text content to an interpolated string, e.g. "Hello Seabiscuit".</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;my-cmp&nbsp;<b>[(title)]</b>="name"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Sets up two-way data binding. Equivalent to: <code>&lt;my-cmp [title]="name" (titleChange)="name=$event"&gt;</code></p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;video&nbsp;<b>#movieplayer</b>&nbsp;...&gt;<br>&nbsp;&nbsp;&lt;button&nbsp;<b>(click)</b>="movieplayer.play()"&gt;<br>&lt;/video&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Creates a local variable <code>movieplayer</code> that provides access to the <code>video</code> element instance in data-binding and event-binding expressions in the current template.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;p&nbsp;<b>*myUnless</b>="myExpression"&gt;...&lt;/p&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>The <code>*</code> symbol means that the current element will be turned into an embedded template. Equivalent to:
+                <code>&lt;template [myUnless]="myExpression"&gt;&lt;p&gt;...&lt;/p&gt;&lt;/template&gt;</code></p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;p&gt;Card&nbsp;No.:&nbsp;<b>{{cardNumber&nbsp;|&nbsp;myCreditCardNumberFormatter}}</b>&lt;/p&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Transforms the current value of expression <code>cardNumber</code> via the pipe called <code>myCreditCardNumberFormatter</code>.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;p&gt;Employer:&nbsp;<b>{{employer?.companyName}}</b>&lt;/p&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>The safe navigation operator (<code>?</code>) means that the <code>employer</code> field is optional and if <code>undefined</code>, the rest of the expression should be ignored.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Built-in directives</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"><p><code>import {NgIf, ...} from 'angular2/common';</code>
+
+            </p>
+            </th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;section&nbsp;<b>*ngIf</b>="showSection"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Removes or recreates a portion of the DOM tree based on the showSection expression.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;li&nbsp;<b>*ngFor</b>="let&nbsp;item&nbsp;of&nbsp;list"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Turns the li element and its contents into a template, and uses that to instantiate a view for each item in list.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;div&nbsp;<b>[ngSwitch]</b>="conditionExpression"&gt;<br>&nbsp;&nbsp;&lt;template&nbsp;<b>[<b>ngSwitchWhen</b>]</b>="case1Exp"&gt;...&lt;/template&gt;<br>&nbsp;&nbsp;&lt;template&nbsp;<b>ngSwitchWhen</b>="case2LiteralString"&gt;...&lt;/template&gt;<br>&nbsp;&nbsp;&lt;template&nbsp;<b>ngSwitchDefault</b>&gt;...&lt;/template&gt;<br>&lt;/div&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Conditionally swaps the contents of the div by selecting one of the embedded templates based on the current value of conditionExpression.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;div&nbsp;<b>[ngClass]</b>="{active:&nbsp;isActive,&nbsp;disabled:&nbsp;isDisabled}"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds the presence of CSS classes on the element to the truthiness of the associated map values. The right-hand side expression should return {class-name: true/false} map.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Forms</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"><p><code>import {FORM_DIRECTIVES} from 'angular2/common';</code>
+
+            </p>
+            </th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;input&nbsp;<b>[(ngModel)]</b>="userName"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Provides two-way data-binding, parsing and validation for form controls.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Class decorators</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"><p><code>import {Directive, ...} from 'angular2/core';</code>
+
+            </p>
+            </th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@Component({...})</b><br>class&nbsp;MyComponent()&nbsp;{}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Declares that a class is a component and provides metadata about the component.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@Directive({...})</b><br>class&nbsp;MyDirective()&nbsp;{}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Declares that a class is a directive and provides metadata about the directive.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@Pipe({...})</b><br>class&nbsp;MyPipe()&nbsp;{}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Declares that a class is a pipe and provides metadata about the pipe.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@Injectable()</b><br>class&nbsp;MyService()&nbsp;{}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Declares that a class has dependencies that should be injected into the constructor when the dependency injector is creating an instance of this class.
+
+            </p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Directive configuration</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"><p><code>@Directive({ property1: value1, ... })</code>
+
+            </p>
+            </th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>selector:</b>&nbsp;'.cool-button:not(a)'</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Specifies a CSS selector that identifies this directive within a template. Supported selectors include <code>element</code>,
+                <code>[attribute]</code>, <code>.class</code>, and <code>:not()</code>.</p>
+                <p>Does not support parent-child relationship selectors.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>providers:</b>&nbsp;[MyService,&nbsp;provide(...)]</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Array of dependency injection providers for this directive and its children.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Component configuration</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"><p>
+                <code>@Component</code> extends <code>@Directive</code>,
+                so the <code>@Directive</code> configuration applies to components as well</p>
+            </th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>viewProviders:</b>&nbsp;[MyService,&nbsp;provide(...)]</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Array of dependency injection providers scoped to this component's view.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>template:</b>&nbsp;'Hello&nbsp;{{name}}'<br><b>templateUrl:</b>&nbsp;'my-component.html'</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Inline template / external template URL of the component's view.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>styles:</b>&nbsp;['.primary&nbsp;{color:&nbsp;red}']<br><b>styleUrls:</b>&nbsp;['my-component.css']</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>List of inline CSS styles / external stylesheet URLs for styling component’s view.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>directives:</b>&nbsp;[MyDirective,&nbsp;MyComponent]</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>List of directives used in the the component’s template.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>pipes:</b>&nbsp;[MyPipe,&nbsp;OtherPipe]</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>List of pipes used in the component's template.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Class field decorators for directives and components</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"><p><code>import {Input, ...} from 'angular2/core';</code>
+
+            </p>
+            </th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@Input()</b>&nbsp;myProperty;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Declares an input property that we can update via property binding (e.g.
+                <code>&lt;my-cmp [my-property]="someExpression"&gt;</code>).</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@Output()</b>&nbsp;myEvent&nbsp;=&nbsp;new&nbsp;EventEmitter();</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Declares an output property that fires events to which we can subscribe with an event binding (e.g. <code>&lt;my-cmp (my-event)="doSomething()"&gt;</code>).</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@HostBinding('[class.valid]')</b>&nbsp;isValid;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds a host element property (e.g. CSS class valid) to directive/component property (e.g. isValid).</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@HostListener('click',&nbsp;['$event'])</b>&nbsp;onClick(e)&nbsp;{...}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Subscribes to a host element event (e.g. click) with a directive/component method (e.g. onClick), optionally passing an argument ($event).</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@ContentChild(myPredicate)</b>&nbsp;myChildComponent;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds the first result of the component content query (myPredicate) to the myChildComponent property of the class.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@ContentChildren(myPredicate)</b>&nbsp;myChildComponents;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds the results of the component content query (myPredicate) to the myChildComponents property of the class.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@ViewChild(myPredicate)</b>&nbsp;myChildComponent;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds the first result of the component view query (myPredicate) to the myChildComponent property of the class. Not available for directives.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@ViewChildren(myPredicate)</b>&nbsp;myChildComponents;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Binds the results of the component view query (myPredicate) to the myChildComponents property of the class. Not available for directives.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Directive and component change detection and lifecycle hooks</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"><p>(implemented as class methods)
+            </p>
+            </th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>constructor(myService:&nbsp;MyService,&nbsp;...)</b>&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>The class constructor is called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>ngOnChanges(changeRecord)</b>&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Called after every change to input properties and before processing content or child views.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>ngOnInit()</b>&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Called after the constructor, initializing input properties, and the first call to ngOnChanges.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>ngDoCheck()</b>&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>ngAfterContentInit()</b>&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Called after ngOnInit when the component's or directive's content has been initialized.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>ngAfterContentChecked()</b>&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Called after every check of the component's or directive's content.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>ngAfterViewInit()</b>&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>ngAfterViewChecked()</b>&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Called after every check of the component's view. Applies to components only.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>ngOnDestroy()</b>&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Called once, before the instance is destroyed.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Dependency injection configuration</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"><p><code>import {provide} from 'angular2/core';</code>
+
+            </p>
+            </th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>provide</b>(MyService,&nbsp;{<b>useClass</b>:&nbsp;MyMockService})</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Sets or overrides the provider for MyService to the MyMockService class.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>provide</b>(MyService,&nbsp;{<b>useFactory</b>:&nbsp;myFactory})</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Sets or overrides the provider for MyService to the myFactory factory function.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>provide</b>(MyValue,&nbsp;{<b>useValue</b>:&nbsp;41})</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Sets or overrides the provider for MyValue to the value 41.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --><table ng-repeat="section in $ctrl.sections" class="ng-scope">
+        <tbody><tr>
+            <th class="ng-binding">Routing and navigation</th>
+            <th ng-bind-html="$ctrl.getSafeHtml(section.description)" class="ng-binding"><p><code>import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, ...} from 'angular2/router';</code>
+
+            </p>
+            </th>
+        </tr>
+        <!-- ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@RouteConfig</b>([<br>&nbsp;&nbsp;{&nbsp;path:&nbsp;'/:myParam',&nbsp;component:&nbsp;MyComponent,&nbsp;name:&nbsp;'MyCmp'&nbsp;},<br>&nbsp;&nbsp;{&nbsp;path:&nbsp;'/staticPath',&nbsp;component:&nbsp;...,&nbsp;name:&nbsp;...},<br>&nbsp;&nbsp;{&nbsp;path:&nbsp;'/*wildCardParam',&nbsp;component:&nbsp;...,&nbsp;name:&nbsp;...}<br>])<br>class&nbsp;MyComponent()&nbsp;{}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Configures routes for the decorated component. Supports static, parameterized, and wildcard routes.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;<b>router-outlet</b>&gt;&lt;/<b>router-outlet</b>&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Marks the location to load the component of the active route.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope">&lt;a&nbsp;<b>[routerLink]</b>="[&nbsp;'/MyCmp',&nbsp;{myParam:&nbsp;'value'&nbsp;}&nbsp;]"&gt;</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Creates a link to a different view based on a route instruction consisting of a route name and optional parameters. The route name matches the as property of a configured route. Add the '/' prefix to navigate to a root route; add the './' prefix for a child route.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>@CanActivate</b>(()&nbsp;=&gt;&nbsp;{&nbsp;...&nbsp;})class&nbsp;MyComponent()&nbsp;{}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>A component decorator defining a function that the router should call first to determine if it should activate this component. Should return a boolean or a promise.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>routerOnActivate</b>(nextInstruction,&nbsp;prevInstruction)&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>After navigating to a component, the router calls the component's routerOnActivate method (if defined).</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>routerCanReuse</b>(nextInstruction,&nbsp;prevInstruction)&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>The router calls a component's routerCanReuse method (if defined) to determine whether to reuse the instance or destroy it and create a new instance. Should return a boolean or a promise.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>routerOnReuse</b>(nextInstruction,&nbsp;prevInstruction)&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>The router calls the component's routerOnReuse method (if defined) when it re-uses a component instance.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>routerCanDeactivate</b>(nextInstruction,&nbsp;prevInstruction)&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>The router calls the routerCanDeactivate methods (if defined) of every component that would be removed after a navigation. The navigation proceeds if and only if all such methods return true or a promise that is resolved.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items --><tr ng-repeat="child in section.items" class="ng-scope">
+            <td><code bold="child.bold" ng-compile="true" class="ng-binding ng-scope ng-isolate-scope"><b>routerOnDeactivate</b>(nextInstruction,&nbsp;prevInstruction)&nbsp;{&nbsp;...&nbsp;}</code></td>
+            <td ng-bind-html="$ctrl.getSafeHtml(child.description)" class="ng-binding"><p>Called before the directive is removed as the result of a route change. May return a promise that pauses removing the directive until the promise resolves.</p>
+            </td>
+        </tr><!-- end ngRepeat: child in section.items -->
+        </tbody></table><!-- end ngRepeat: section in $ctrl.sections --></ngio-cheatsheet></div>

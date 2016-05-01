@@ -1,0 +1,429 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>02. First Component · Angular 2 Workshop Handbook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="You make a component with a @Component decorator and a class. The
+@Component requires a selector and a template, then you include
+the component in a parent Component using directives: [].">
+        <meta name="generator" content="GitBook 3.0.0-pre.9">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../events-and-refs/" />
+    
+    
+    <link rel="prev" href="../hello-world/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        
+        <nav role="navigation">
+            <ul class="summary">
+                
+                
+
+                
+
+                
+                    
+                    
+    
+        <li class="chapter " data-level="0" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="../new-project/">
+            
+                <a href="../new-project/">
+            
+                    
+                    00. New Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="../hello-world/">
+            
+                <a href="../hello-world/">
+            
+                    
+                    01. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    02. First Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="../events-and-refs/">
+            
+                <a href="../events-and-refs/">
+            
+                    
+                    03. Events and Refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="../smart-and-dumb-components/">
+            
+                <a href="../smart-and-dumb-components/">
+            
+                    
+                    04. Smart and Dumb Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="../built-in-directives/">
+            
+                <a href="../built-in-directives/">
+            
+                    
+                    05. Built-in Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="../ngFor/">
+            
+                <a href="../ngFor/">
+            
+                    
+                    06. Repeating Elements with ngFor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="../injecting-services/">
+            
+                <a href="../injecting-services/">
+            
+                    
+                    07. Injecting Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    08. Loading Data with Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+                
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                        Published with GitBook
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >02. First Component</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="first-component">First Component</h1>
+<h2 id="tldr">TL;DR</h2>
+<p>You make a component with a <code>@Component</code> decorator and a <code>class</code>. The
+<code>@Component</code> requires a <code>selector</code> and a <code>template</code>, then you include
+the component in a parent Component using <code>directives: []</code>.</p>
+<h2 id="components">Components</h2>
+<p>Components are the backbone of Angular 2. You will be writing <strong><em>a lot*</em></strong>
+of components, so you&apos;ll get accustomed to the new syntax quickly <img align="absmiddle" alt=":wink:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/wink.png" title=":wink:">.</p>
+<p>A <code>Component</code> is the combination of a <code>class</code> and a <code>@Component</code> 
+decorator. </p>
+<h2 id="class"><code>class</code></h2>
+<p>The <code>class</code> is a typical JavaScript <code>class</code> whose purpose is to support
+the <code>template</code> of the component. For example, you&apos;ll handle events from
+the <code>template</code> inside your <code>class</code>.</p>
+<h2 id="component"><code>@Component</code></h2>
+<p>The <code>@Component</code> is a <code>Decorator</code> that maps the <code>selector</code> and the 
+<code>template</code> to the <code>class</code>. </p>
+<h3 id="selector"><code>selector</code></h3>
+<p>Every <code>@Component</code> needs a <code>selector</code>
+so that it knows where it is declared in parent templates.</p>
+<h3 id="template"><code>template</code></h3>
+<p>Every <code>@Component</code> also needs a <code>template</code> that will be rendered
+wherever the component is included.</p>
+<h2 id="ambiguity-alert"><img align="absmiddle" alt=":warning:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:"> Ambiguity Alert!</h2>
+<p>&quot;Component&quot; is used interchangably to describe the <code>@Component</code> 
+decorator as well as the combination of the decorator and the class.</p>
+<p>The <code>class</code> is often called a <code>controller</code>. That&apos;s mostly a due to the
+naming conventions of Angular 1, but the name suits it fine.</p>
+<p>A <code>@Component</code> is a <code>@Directive</code> with a <code>template</code>, so you include
+your component <code>class</code> in the parents&apos; <code>directives:[]</code> array.</p>
+<h2 id="im-so-confused-"><img align="absmiddle" alt=":confused:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/confused.png" title=":confused:"> I&apos;m so confused... <img align="absmiddle" alt=":confused:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/confused.png" title=":confused:"></h2>
+<p>Relax <img align="absmiddle" alt=":relaxed:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/relaxed.png" title=":relaxed:"> .  All components look alike. In fact, the patterns will 
+become <em>very</em> easy to read when you see many of them together. After 
+you&apos;ve created your third or fourth component, you&apos;ll be used to the 
+patterns (you might even be copy and pasting from others components) 
+enough that you won&apos;t really care about the syntax anymore.</p>
+<h2 id="show-me-the-code">Show Me the Code</h2>
+<blockquote>
+<p><code>src/components/first.component.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;first&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+            I have a message <span class="token keyword">for</span> you<span class="token punctuation">:</span> 
+        `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">First</span><span class="token punctuation">{</span>
+    message <span class="token operator">=</span> <span class="token string">&quot;Hi!&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><code>src/app.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>First<span class="token punctuation">}</span> from <span class="token string">&apos;./components/first.component&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;app&apos;</span><span class="token punctuation">,</span>
+    directives<span class="token punctuation">:</span><span class="token punctuation">[</span>First<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        <span class="token operator">&lt;</span>first<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>first<span class="token operator">&gt;</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="gotchas"><img align="absmiddle" alt=":warning:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:"> Gotchas</h2>
+<p>If you have a blank page, check these first:</p>
+<ul>
+<li>You included your component in the <code>directives:[]</code> Array</li>
+<li>Your <code>selector:&apos;&apos;</code> name matches the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>selector</span><span class="token punctuation">&gt;</span></span></code> in the template</li>
+</ul>
+<h2 id="whats-that-syntax">What&apos;s That Syntax?</h2>
+<h3 id="-multiline-strings"><code>`` </code> Multiline Strings</h3>
+<p>The backticks are used for multiline strings which makes 
+them perfect for HMTL templates:</p>
+<pre><code class="lang-js"><span class="token keyword">var</span> s <span class="token operator">=</span> `I am a string`<span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> template <span class="token operator">=</span> `
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>I am also a string<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+`<span class="token punctuation">;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+        </div>
+        <div class="no-results">
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../hello-world/" class="navigation navigation-prev " aria-label="Previous page: 01. Hello World">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../events-and-refs/" class="navigation navigation-next " aria-label="Next page: 03. Events and Refs">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"You make a component with a @Component decorator and a class. The\n@Component requires a selector and a template, then you include\nthe component in a parent Component using directives: [].","title":"02. First Component","next":{"level":"4","title":"03. Events and Refs","depth":1,"path":"events-and-refs/README.md","anchor":null},"previous":{"level":"2","title":"01. Hello World","depth":1,"path":"hello-world/README.md","anchor":null},"level":"3","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"first-component/README.md","mtime":"2016-04-30T16:15:45.990Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-01T00:44:47.320Z","generator":"website"},"basePath":"..","book":{}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

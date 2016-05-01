@@ -1,0 +1,519 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>01. Hello World · Angular 2 Workshop Handbook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="You bootstrap an App Component to startup your app in the &lt;app&gt;
+tag of your HTML.">
+        <meta name="generator" content="GitBook 3.0.0-pre.9">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../first-component/" />
+    
+    
+    <link rel="prev" href="../new-project/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        
+        <nav role="navigation">
+            <ul class="summary">
+                
+                
+
+                
+
+                
+                    
+                    
+    
+        <li class="chapter " data-level="0" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="../new-project/">
+            
+                <a href="../new-project/">
+            
+                    
+                    00. New Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    01. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="../first-component/">
+            
+                <a href="../first-component/">
+            
+                    
+                    02. First Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="../events-and-refs/">
+            
+                <a href="../events-and-refs/">
+            
+                    
+                    03. Events and Refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="../smart-and-dumb-components/">
+            
+                <a href="../smart-and-dumb-components/">
+            
+                    
+                    04. Smart and Dumb Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="../built-in-directives/">
+            
+                <a href="../built-in-directives/">
+            
+                    
+                    05. Built-in Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="../ngFor/">
+            
+                <a href="../ngFor/">
+            
+                    
+                    06. Repeating Elements with ngFor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="../injecting-services/">
+            
+                <a href="../injecting-services/">
+            
+                    
+                    07. Injecting Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    08. Loading Data with Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+                
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                        Published with GitBook
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >01. Hello World</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="hello-world">Hello World</h1>
+<h2 id="tldr">TL;DR</h2>
+<p>You <code>bootstrap</code> an <code>App Component</code> to startup your app in the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app</span><span class="token punctuation">&gt;</span></span></code>
+tag of your HTML.</p>
+<h2 id="indexhtml-maints-appts"><code>index.html</code>, <code>main.ts</code>, <code>app.ts</code></h2>
+<h3 id="indexhtml"><code>index.html</code></h3>
+<p>Your main <code>index.html</code> file will be required to simply include the 
+compiled and bundled version of your code and declare a tag that defines
+the entry point of your app.</p>
+<p>Something as empty and as simple as the following will work great:</p>
+<pre><code class="lang-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Angular 2 StarWars Party!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+      <span class="token comment" spellcheck="true">&lt;!--&lt;base&gt; is required for routing --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>base</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment" spellcheck="true">&lt;!-- &lt;app&gt; is the tag your Angular 2 app will be loaded into--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app</span><span class="token punctuation">&gt;</span></span>
+  Loading...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment" spellcheck="true">&lt;!-- Place your script tag here. Often your build will inject it for you.--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h3 id="appts"><code>app.ts</code></h3>
+<p>Your <code>app.ts</code> is your main application component.</p>
+<p>The <code>selector</code> must match up with the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app</span><span class="token punctuation">&gt;</span></span></code> tag you used in your
+<code>index.html</code>. If the <code>selector</code> is <code>party-time</code>, the tag would need to
+be <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>party-time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>party-time</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>The template is the main HTML of your project.</p>
+<pre><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  selector<span class="token punctuation">:</span> <span class="token string">&apos;app&apos;</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span>`
+  Hello World<span class="token operator">!</span>
+`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<p>The resulting <code>body</code> when run in the browser will look like the 
+following. Notice how the <code>Hello World</code> is wrapped inside of an <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app</span><span class="token punctuation">&gt;</span></span></code>
+tag even though your main template does not have any tags:</p>
+<pre><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app</span><span class="token punctuation">&gt;</span></span>
+  Hello World!
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app.bundle.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h3 id="maints"><code>main.ts</code></h3>
+<p>Import your <code>App Component</code> into your <code>main.ts</code> to <code>bootstrap</code> and 
+startup your application. You can consider <code>main.ts</code> the entry point of 
+your app and is only used for configuation and startup.</p>
+<p><code>bootstrap</code> returns a <code>Promise</code>, so you can use <code>then</code> and <code>catch</code>
+to handle bootstrap completion or errors.</p>
+<pre><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>bootstrap<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/platform/browser&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>App<span class="token punctuation">}</span> from <span class="token string">&apos;./app&apos;</span><span class="token punctuation">;</span>
+
+<span class="token function">bootstrap</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>`App Running<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>`<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err <span class="token operator">=</span><span class="token operator">&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="show-me-the-code">Show Me The Code</h2>
+<pre><code class="lang-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Angular 2 App<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>base</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>bootstrap<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/platform/browser&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>App<span class="token punctuation">}</span> from <span class="token string">&apos;./app&apos;</span><span class="token punctuation">;</span>
+
+<span class="token function">bootstrap</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;App running...&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err <span class="token operator">=</span><span class="token operator">&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;app&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        Hello<span class="token operator">!</span> I&apos;m an App Container<span class="token operator">!</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<h2 id="whats-that-syntax">What&apos;s That Syntax?</h2>
+<h3 id="import-and-export-javascript">Import and Export (JavaScript)</h3>
+<p><code>import</code> and <code>export</code> work together to help you share code between 
+files.</p>
+<ul>
+<li><code>export</code> lets you expose the code you want to share</li>
+<li><code>import</code> lets you pull in the exported code</li>
+</ul>
+<p>Assuming both of the files below are in the same directory:</p>
+<blockquote>
+<p><code>foo.js</code></p>
+<pre><code class="lang-js"><span class="token keyword">export</span> <span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">&quot;hi&quot;</span><span class="token punctuation">;</span>
+</code></pre>
+<p><code>bar.js</code></p>
+<pre><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>message<span class="token punctuation">}</span> from <span class="token string">&apos;./foo&apos;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//logs &quot;hi&quot;</span>
+</code></pre>
+</blockquote>
+<h3 id="angular-2-modules-javascript">Angular 2 Modules (JavaScript)</h3>
+<p>You will see many modules imported such as:</p>
+<ul>
+<li><code>angular2/core</code></li>
+<li><code>angular2/platform/browser</code></li>
+<li><code>angular2/common</code></li>
+</ul>
+<p>Just think of these as file paths to the code that you want to import.</p>
+<h3 id="decorators-typescript">Decorators (TypeScript)</h3>
+<p><code>@Component</code> is a <code>Decorator</code> that changes the behavior of the class
+defined directly underneath it.</p>
+<p><code>Decorator()</code> is really just a function that takes the object with 
+<code>{selector:&apos;app&apos;}</code> and applies it. The <code>@</code> simply links that function
+to what&apos;s beneath it in the code. So when you see a <code>Decorator</code> think,
+&quot;this is a function being invoked with what&apos;s declared next to it&quot;.</p>
+<h3 id="classes-javascript">Classes (JavaScript)</h3>
+<p>The <code>class</code> keyword in JavaScript is just syntax sugar for what&apos;s been
+done in JavaScript for years.</p>
+<pre><code class="lang-js"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>is the same as</p>
+<pre><code>function Person(){}
+var person = new Person();
+</code></pre><p>It&apos;s simply much shorter and easier to write:</p>
+<pre><code class="lang-js"><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>greeting <span class="token operator">=</span> message<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Hello, &quot;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>greeting<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>than</p>
+<pre><code class="lang-js"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>greeting <span class="token operator">=</span> message<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    Person<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>greet <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Hello, &quot;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>greeting<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Classes create the same prototype chains we know from previous versions 
+of JavaScript, but with an arguably saner syntax.</p>
+<h3 id="arrow-functions"><code>()=&gt;</code> Arrow Functions</h3>
+<p><code>()=&gt;</code> is used just like an anonymous <code>function(){}</code>, but it doesn&apos;t create a
+<code>this</code>.</p>
+<pre><code class="lang-js"><span class="token keyword">var</span> sayHi <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;hi&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>is equivalent to:</p>
+<pre><code class="lang-js"><span class="token keyword">var</span> sayHi <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;hi&apos;</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If there&apos;s only one argument, you can actually omit the <code>()</code>:</p>
+<pre><code class="lang-js"><span class="token keyword">var</span> sayHi <span class="token operator">=</span> message <span class="token operator">=</span><span class="token operator">&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>is equivalent to </p>
+<pre><code class="lang-js"><span class="token keyword">var</span> sayHi <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+        </div>
+        <div class="no-results">
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../new-project/" class="navigation navigation-prev " aria-label="Previous page: 00. New Project">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../first-component/" class="navigation navigation-next " aria-label="Next page: 02. First Component">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"You bootstrap an App Component to startup your app in the <app>\ntag of your HTML.","title":"01. Hello World","next":{"level":"3","title":"02. First Component","depth":1,"path":"first-component/README.md","anchor":null},"previous":{"level":"1","title":"00. New Project","depth":1,"path":"new-project/README.md","anchor":null},"level":"2","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"hello-world/README.md","mtime":"2016-04-30T23:49:57.801Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-01T00:44:47.320Z","generator":"website"},"basePath":"..","book":{}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

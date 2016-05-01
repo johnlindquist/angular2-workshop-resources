@@ -1,0 +1,449 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>05. Built-in Directives · Angular 2 Workshop Handbook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="In Angular 1, it was confusing when you should use {{}} inside of 
+attributes. Angular 2 should consistently always use [] for 
+input/setting values and () for output/getting values.">
+        <meta name="generator" content="GitBook 3.0.0-pre.9">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ngFor/" />
+    
+    
+    <link rel="prev" href="../smart-and-dumb-components/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        
+        <nav role="navigation">
+            <ul class="summary">
+                
+                
+
+                
+
+                
+                    
+                    
+    
+        <li class="chapter " data-level="0" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="../new-project/">
+            
+                <a href="../new-project/">
+            
+                    
+                    00. New Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="../hello-world/">
+            
+                <a href="../hello-world/">
+            
+                    
+                    01. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="../first-component/">
+            
+                <a href="../first-component/">
+            
+                    
+                    02. First Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="../events-and-refs/">
+            
+                <a href="../events-and-refs/">
+            
+                    
+                    03. Events and Refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="../smart-and-dumb-components/">
+            
+                <a href="../smart-and-dumb-components/">
+            
+                    
+                    04. Smart and Dumb Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    05. Built-in Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="../ngFor/">
+            
+                <a href="../ngFor/">
+            
+                    
+                    06. Repeating Elements with ngFor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="../injecting-services/">
+            
+                <a href="../injecting-services/">
+            
+                    
+                    07. Injecting Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    08. Loading Data with Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+                
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                        Published with GitBook
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >05. Built-in Directives</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="built-in-directives">Built-in Directives</h1>
+<h2 id="tldr">TL;DR</h2>
+<ul>
+<li>You don&apos;t need to include built-in directives in <code>directives:[]</code></li>
+<li>ngModel has a crazy new syntax: <code>[(ngModel)]=&quot;name&quot;</code></li>
+</ul>
+<h2 id="gotchas"><img align="absmiddle" alt=":warning:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:"> Gotchas</h2>
+<p>In Angular 1, it was confusing when you should use <code>{{}}</code> inside of 
+attributes. Angular 2 should consistently always use <code>[]</code> for 
+input/setting values and <code>()</code> for output/getting values.</p>
+<h2 id="show-me-the-code">Show Me the Code</h2>
+<h3 id="ngclass-ngclass">NgClass <code>[ngClass]</code></h3>
+<p>Used for conditionally applying/removing style classes</p>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span><span class="token string">&apos;ngclass-example&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+    <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+        <span class="token punctuation">.</span>highlight<span class="token punctuation">{</span>
+            border<span class="token punctuation">:</span> 3px solid yellow<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token punctuation">.</span>selected<span class="token punctuation">{</span>
+            font<span class="token operator">-</span>weight<span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>div 
+        <span class="token punctuation">(</span>mouseover<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">&quot;isOver = true&quot;</span> 
+        <span class="token punctuation">(</span>mouseout<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">&quot;isOver = false&quot;</span> 
+        <span class="token punctuation">(</span>click<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">&quot;isSelected = !isSelected&quot;</span>
+        <span class="token punctuation">[</span>ngClass<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;{highlight: isOver, selected: isSelected}&quot;</span>
+        <span class="token operator">&gt;</span>    
+        Roll over me<span class="token operator">!</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgClassExample</span><span class="token punctuation">{</span>
+    isOver <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+    isSelected <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="ngif-ngif">NgIf <code>*ngIf</code></h3>
+<p>Used for conditionally showing/hiding elements</p>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span><span class="token string">&apos;ngif-example&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+    <span class="token operator">&lt;</span>button <span class="token punctuation">(</span>click<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">&quot;isMessageShown = !isMessageShown&quot;</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">{</span>isMessageShown <span class="token operator">?</span> <span class="token string">&apos;Hide Message&apos;</span> <span class="token punctuation">:</span> <span class="token string">&apos;Show Message&apos;</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h1 <span class="token operator">*</span>ngIf<span class="token operator">=</span><span class="token string">&quot;isMessageShown&quot;</span><span class="token operator">&gt;</span>HI EVERYBODY<span class="token operator">!</span><span class="token operator">!</span><span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgIfExample</span><span class="token punctuation">{</span>
+    isMessageShown<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="ngswitch-ngswitch-ngswitchwhen-ngswitchwhen-ngswitchdefault-ngswitchdefault">NgSwitch <code>[ngSwitch]</code>, NgSwitchWhen <code>*ngSwitchWhen</code>, NgSwitchDefault <code>*ngSwitchDefault</code></h3>
+<p>Just like a JavaScript <code>switch</code>. Takes a value and returns the matched
+<code>case</code>:</p>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;ngswitch-example&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+<span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input #i <span class="token punctuation">(</span>change<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">&quot;num = convertToNumber(i.value)&quot;</span> type<span class="token operator">=</span><span class="token string">&quot;number&quot;</span> value<span class="token operator">=</span><span class="token string">&quot;0&quot;</span><span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>div <span class="token punctuation">[</span>ngSwitch<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;num&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p <span class="token operator">*</span>ngSwitchDefault<span class="token operator">&gt;</span>Change the <span class="token keyword">number</span> above<span class="token punctuation">,</span> I dare you<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p <span class="token operator">*</span>ngSwitchWhen<span class="token operator">=</span><span class="token string">&quot;1&quot;</span><span class="token operator">&gt;</span>One is the loneliest <span class="token keyword">number</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p <span class="token operator">*</span>ngSwitchWhen<span class="token operator">=</span><span class="token string">&quot;2&quot;</span><span class="token operator">&gt;</span>Two is company<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p <span class="token operator">*</span>ngSwitchWhen<span class="token operator">=</span><span class="token string">&quot;3&quot;</span><span class="token operator">&gt;</span>Three is a crowd<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgSwitchExample</span> <span class="token punctuation">{</span>
+    num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    convertToNumber <span class="token operator">=</span> <span class="token keyword">string</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token keyword">string</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img align="absmiddle" alt=":warning:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:"> Will very so be updated from <code>ngSwitchWhen</code> to <code>ngSwitchCase</code></p>
+<h3 id="ngmodel-ngmodel">NgModel <code>[(ngModel)]</code></h3>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;ngmodel-example&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+<span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>ngModel<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;name&quot;</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NgModelExample</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<h3 id="ngfor-ngform">NgFor, NgForm</h3>
+<p>These are disussed later, but also don&apos;t need to be included.</p>
+<h2 id="whats-that-syntax">What&apos;s That Syntax?</h2>
+<h3 id="on-switch-and--on-case"><code>[]</code> on Switch and <code>*</code> on Case</h3>
+<p>The <code>[]</code> is the value being set, the <code>*</code> is the template being used.</p>
+<h3 id="ngmodelname"><code>[(ngModel)]=&quot;name&quot;</code></h3>
+<p>The <code>[()]</code> reprensents an input <code>[]</code> and an output <code>()</code> combined into
+one. So an <code>ngModel</code> &quot;sets&quot; and &quot;gets&quot; the value.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+        </div>
+        <div class="no-results">
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../smart-and-dumb-components/" class="navigation navigation-prev " aria-label="Previous page: 04. Smart and Dumb Components">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ngFor/" class="navigation navigation-next " aria-label="Next page: 06. Repeating Elements with ngFor">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"In Angular 1, it was confusing when you should use {{}} inside of \nattributes. Angular 2 should consistently always use [] for \ninput/setting values and () for output/getting values.","title":"05. Built-in Directives","next":{"level":"7","title":"06. Repeating Elements with ngFor","depth":1,"path":"ngFor/README.md","anchor":null},"previous":{"level":"5","title":"04. Smart and Dumb Components","depth":1,"path":"smart-and-dumb-components/README.md","anchor":null},"level":"6","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"built-in-directives/README.md","mtime":"2016-04-30T14:23:13.627Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-01T00:44:47.320Z","generator":"website"},"basePath":"..","book":{}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

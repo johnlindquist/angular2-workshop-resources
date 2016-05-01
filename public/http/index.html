@@ -1,0 +1,560 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>08. Loading Data with Http · Angular 2 Workshop Handbook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The http service is included in the angular2/http package. You
+can actually use whatever http services you&#39;d like with Angular 2,
+http is simply a convenience. To use the http service, you&#39;ll need to include the HTTP_PROVIDERS
+either in the same Component&#39;s providers:[] or in a parent 
+Component&#39;...">
+        <meta name="generator" content="GitBook 3.0.0-pre.9">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../injecting-services/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        
+        <nav role="navigation">
+            <ul class="summary">
+                
+                
+
+                
+
+                
+                    
+                    
+    
+        <li class="chapter " data-level="0" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="../new-project/">
+            
+                <a href="../new-project/">
+            
+                    
+                    00. New Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="../hello-world/">
+            
+                <a href="../hello-world/">
+            
+                    
+                    01. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="../first-component/">
+            
+                <a href="../first-component/">
+            
+                    
+                    02. First Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="../events-and-refs/">
+            
+                <a href="../events-and-refs/">
+            
+                    
+                    03. Events and Refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="../smart-and-dumb-components/">
+            
+                <a href="../smart-and-dumb-components/">
+            
+                    
+                    04. Smart and Dumb Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="../built-in-directives/">
+            
+                <a href="../built-in-directives/">
+            
+                    
+                    05. Built-in Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="../ngFor/">
+            
+                <a href="../ngFor/">
+            
+                    
+                    06. Repeating Elements with ngFor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="../injecting-services/">
+            
+                <a href="../injecting-services/">
+            
+                    
+                    07. Injecting Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    08. Loading Data with Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+                
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                        Published with GitBook
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >08. Loading Data with Http</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="loading-data-with-http">Loading Data with Http</h1>
+<h2 id="tldr">TL;DR</h2>
+<ul>
+<li>Inject <code>HTTP_PROVIDERS</code> into your app <code>providers</code></li>
+<li>Inject <code>Http</code> into your Service</li>
+<li>Use <code>http.get()</code> to define the request</li>
+<li>Use an async pipe <code>| async</code> to &quot;subscribe&quot; to the request</li>
+</ul>
+<h2 id="http">Http</h2>
+<p>The <code>http</code> service is included in the <code>angular2/http</code> package. You
+can actually use whatever http services you&apos;d like with Angular 2,
+<code>http</code> is simply a convenience.</p>
+<p>To use the <code>http</code> service, you&apos;ll need to include the <code>HTTP_PROVIDERS</code>
+either in the same Component&apos;s <code>providers:[]</code> or in a parent 
+Component&apos;s <code>providers:[]</code>. Typically, you&apos;d see the <code>HTTP_PROVIDERS</code>
+in you <code>App Component</code>:</p>
+<pre><code class="lang-js">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;app&apos;</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>HTTP_PROVIDERS<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//Http is now available to children components</span>
+    template<span class="token punctuation">:</span>`
+        hi
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<p>Then in any child component (a &quot;smart&quot; one!) you&apos;d inject the <code>Http</code> service itself:</p>
+<pre><code class="lang-js">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> `some<span class="token operator">-</span>child<span class="token operator">-</span>component`<span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span>`yo`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">SomeChildComponent</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>http<span class="token punctuation">:</span>Http<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//do http things</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code>http</code> is built upon <code>Observable</code>s. So when you call <code>http.get()</code>, 
+it&apos;s not going to make the request until you <code>subscribe</code> to it.</p>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">//just sits there</span>
+http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;http://localhost:4000&apos;</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//actually makes the request</span>
+http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;http://localhost:4000&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>What this means is that you can define a request, assign it to a
+variable/field/whatever, then subscribe to that variable.</p>
+<pre><code class="lang-js"><span class="token keyword">const</span> example <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;http://localhost:4000&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//pass &quot;example&quot; around, then subscribe</span>
+example<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="the-async-pipe--async">The Async Pipe <code>| async</code></h2>
+<p>You can <code>subscribe</code> in a template with the <code>| async</code>. This means that 
+you can make the assignment, pass it into the <code>template</code>, then render out
+the results in the <code>template</code> whenenver the results are returned.</p>
+<pre><code class="lang-js">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span><span class="token string">&apos;example&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span>`        
+        <span class="token punctuation">{</span><span class="token punctuation">{</span>people <span class="token operator">|</span> async<span class="token punctuation">}</span><span class="token punctuation">}</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">Example</span><span class="token punctuation">{</span>
+    people<span class="token punctuation">;</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>http<span class="token punctuation">:</span>Http<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>people <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;http://localhost:4000/people&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="mapping-the-response-to-json"><code>map</code>ping the Response to JSON</h3>
+<p>Many services requests will return JSON objects, so any easy way to
+get the JSON object is to map the response.</p>
+<pre><code class="lang-js"><span class="token keyword">const</span> example <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;http://localhost:4000&apos;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">&gt;</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p><code>res.json()</code> will grab the body as JSON and return it so you&apos;ll have
+convenient access. <code>map</code> is an &quot;operator&quot; in RxJS, so to use it,
+you&apos;ll need to import the <code>map</code> operator separately.</p>
+<pre><code class="lang-js"><span class="token keyword">import</span> <span class="token string">&apos;rxjs/add/operator/map&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="gotchas"><img align="absmiddle" alt=":warning:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:"> Gotchas</h2>
+<ul>
+<li>Remember to import <code>rxjs/add/operator/map</code> when using <code>get().map</code></li>
+</ul>
+<h3 id="moving-http-to-a-service">Moving <code>Http</code> to a <code>Service</code></h3>
+<p>To be able to share your various requests across your app, you
+can move <code>Http</code> into its own Service:</p>
+<pre><code class="lang-js">@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">ExampleService</span><span class="token punctuation">{</span>
+    people<span class="token punctuation">;</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>http<span class="token punctuation">:</span>Http<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>people <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;http://localhost:4000&apos;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">&gt;</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>This way you can inject the <code>Service</code> into your Component (and any 
+other Component for that matter):</p>
+<pre><code class="lang-js">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;example-component&apos;</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>ExampleService<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        <span class="token punctuation">{</span><span class="token punctuation">{</span>exampleService<span class="token punctuation">.</span>people <span class="token operator">|</span> async<span class="token punctuation">}</span><span class="token punctuation">}</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">ExampleComponent</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">public</span> exampleService<span class="token punctuation">:</span>ExampleService<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="show-me-the-code">Show Me the Code</h2>
+<blockquote>
+<p><code>src/services/starwars.service.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Injectable<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Http<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/http&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&apos;rxjs/add/operator/map&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> STARWARS_API <span class="token operator">=</span> <span class="token string">&apos;http://localhost:5000&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">StarWarsService</span><span class="token punctuation">{</span>
+    people<span class="token punctuation">;</span>
+    starships<span class="token punctuation">;</span>
+    vehicles<span class="token punctuation">;</span>
+
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span>http<span class="token punctuation">:</span>Http<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>people <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>`$<span class="token punctuation">{</span>STARWARS_API<span class="token punctuation">}</span><span class="token operator">/</span>people`<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">&gt;</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">this</span><span class="token punctuation">.</span>starships <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>`$<span class="token punctuation">{</span>STARWARS_API<span class="token punctuation">}</span><span class="token operator">/</span>starships`<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">&gt;</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">this</span><span class="token punctuation">.</span>vehicles <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>`$<span class="token punctuation">{</span>STARWARS_API<span class="token punctuation">}</span><span class="token operator">/</span>vehicles`<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">&gt;</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><code>src/app.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>StarWarsService<span class="token punctuation">}</span> from <span class="token string">&apos;./services/starwars.service&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>HTTP_PROVIDERS<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/http&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Home<span class="token punctuation">}</span> from <span class="token string">&apos;./home/home.component&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;app&apos;</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>StarWarsService<span class="token punctuation">,</span> HTTP_PROVIDERS<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    directives<span class="token punctuation">:</span><span class="token punctuation">[</span>Home<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        <span class="token operator">&lt;</span>home<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>home<span class="token operator">&gt;</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><code>src/home/home.component.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>StarWarsService<span class="token punctuation">}</span> from <span class="token string">&apos;../services/starwars.service&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;home&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>People<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div <span class="token operator">*</span>ngFor<span class="token operator">=</span><span class="token string">&quot;let person of starwarsService.people | async&quot;</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+      <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>Starships<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div <span class="token operator">*</span>ngFor<span class="token operator">=</span><span class="token string">&quot;let starship of starwarsService.starships | async&quot;</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">{</span>starship<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+      <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>Vehicles<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div <span class="token operator">*</span>ngFor<span class="token operator">=</span><span class="token string">&quot;let vehicle of starwarsService.vehicles | async&quot;</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">{</span>vehicle<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Home</span><span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">public</span> starwarsService<span class="token punctuation">:</span>StarWarsService<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="injectable"><code>@Injectable()</code></h2>
+<p>The <code>@Injectable()</code> decorator is required so that Angular 2 has the 
+proper Metadata to be able to properly register your service with the 
+<code>Injector</code>. You don&apos;t need to worry about the metadata, it&apos;s handled
+during compilation from TypeScript to JavaScript. (This is also why 
+<code>&quot;emitDecoratorMetadata&quot;: true,</code> is required in your <code>tsconfig.json</code> 
+when compiling down your TypeScript.)</p>
+<h2 id="importing-vs-injecting">Importing vs. Injecting</h2>
+<p>It&apos;s easy to get confused between <code>import</code> and Injecting, but they&apos;re
+not at all the same thing.</p>
+<p>Importing (using the <code>import</code> keyword) is simply how JavaScript shares
+code across files.</p>
+<p>Injecting happens during &quot;runtime&quot; (when your application is running 
+in the browser) and is how you share values/instances across your 
+application.</p>
+<h2 id="whats-that-syntax">What&apos;s That Syntax?</h2>
+<h3 id="async-pipe--async">Async Pipe <code>| async</code></h3>
+<p>While many pipes are used for formatting data, the <code>Async Pipe</code> is used
+to allow data to be pushed into the template through either an 
+Observable or a Promise.</p>
+<p>The simplest example being a timer:</p>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Observable<span class="token punctuation">}</span> from <span class="token string">&apos;rxjs/Observable&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&apos;rxjs/add/observable/interval&apos;</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;home&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        <span class="token punctuation">{</span><span class="token punctuation">{</span>timer <span class="token operator">|</span> async<span class="token punctuation">}</span><span class="token punctuation">}</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Home</span><span class="token punctuation">{</span>
+    timer <span class="token operator">=</span> Observable<span class="token punctuation">.</span><span class="token function">interval</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+        </div>
+        <div class="no-results">
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../injecting-services/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 07. Injecting Services">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"The http service is included in the angular2/http package. You\ncan actually use whatever http services you'd like with Angular 2,\nhttp is simply a convenience. To use the http service, you'll need to include the HTTP_PROVIDERS\neither in the same Component's providers:[] or in a parent \nComponent'...","title":"08. Loading Data with Http","next":null,"previous":{"level":"8","title":"07. Injecting Services","depth":1,"path":"injecting-services/README.md","anchor":null},"level":"9","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"http/README.md","mtime":"2016-04-30T21:43:33.300Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-01T00:44:47.320Z","generator":"website"},"basePath":"..","book":{}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

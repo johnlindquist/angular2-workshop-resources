@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArmoryWorkspace">
+    <option name="isFirstStart" value="false" />
+    <srcTreeState2>
+      <node name="angular2book|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+        <node name="events-and-refs|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+          <node name="src|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|" />
+        </node>
+        <node name="http|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+          <node name="src|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+            <node name="home|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|" />
+            <node name="services|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|" />
+          </node>
+        </node>
+        <node name="injecting-services|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+          <node name="dist|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+            <node name="components|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|" />
+          </node>
+          <node name="src|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+            <node name="services|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|" />
+          </node>
+        </node>
+        <node name="ngFor|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+          <node name="build|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|" />
+          <node name="src|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+            <node name="home|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+              <node name="components|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|" />
+            </node>
+          </node>
+        </node>
+        <node name="smart-and-dumb-components|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+          <node name="src|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|">
+            <node name="components|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|" />
+          </node>
+        </node>
+        <node name="swapi|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|" />
+        <node name="typings|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiDirectoryImpl|" />
+      </node>
+    </srcTreeState2>
+    <nodeInfoState>
+      <child name="angular2book">
+        <child name="_book" order="10" />
+        <child name="example" order="1" />
+        <child name="first-component" order="4" />
+        <child name="http">
+          <child name="src">
+            <child name="home" />
+            <child name="services" />
+          </child>
+        </child>
+        <child name="injecting-services">
+          <child name="src">
+            <child name="services" />
+          </child>
+        </child>
+        <child name="install" order="3" />
+        <child name="smart-and-dumb-components" order="7">
+          <child name="src">
+            <child name="components" />
+          </child>
+        </child>
+      </child>
+    </nodeInfoState>
+    <treesState>
+      <tree order="0" ws="0" width2="1121">
+        <expand>
+          <item val="" />
+          <item val="angular2book|" />
+          <item val="angular2book|ngFor|" />
+          <item val="angular2book|ngFor|src|" />
+          <item val="angular2book|ngFor|src|home|" />
+          <item val="angular2book|ngFor|src|home|components|" />
+        </expand>
+        <select>
+          <item val="angular2book|" />
+        </select>
+        <roots>
+          <item val="angular2book|" />
+          <item val="External Libraries|" />
+          <item val="External Directories|" />
+        </roots>
+      </tree>
+    </treesState>
+    <workspaceTree curIdx="0">
+      <ws layout="Compact" />
+    </workspaceTree>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68ee7087-66c8-444b-a0a6-492fb9baadec" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/angular2book_node_modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README_PDF.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cheatsheet.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/copy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new-project/README.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/Qui-Gon_jinn.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/a-wing.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/aa-9_coruscant_freighter.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/ackbar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/adi_gallia.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/anakin_skywalker.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/arc-170.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/armored_assault_tank.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/arvel_crynyd.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/at-at.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/at-rt.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/at-st.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/at-te.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/ayla_secura.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/b-wing.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/bail_prestor_organa.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/banking_clan_frigte.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/bantha-ii_cargo_skiff.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/barriss_offee.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/belbullab-22_starfighter.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/ben_quadinaros.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/beru_whitesun_lars.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/bib_fortuna.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/biggs_darklighter.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/boba_fett.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/bossk.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/c-3po.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/c-9979_landing_craft.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/calamari_cruiser.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/chewbacca.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/cliegg_lars.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/clone_turbo_tank.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/corde.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/corporate_alliance_tank_droid.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/cr90_corvette.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/darth_maul.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/darth_vader.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/death_star.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/dexter_jettster.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/dooku.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/dorme.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/droid_control_ship.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/droid_gunship.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/droid_tri-fighter copy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/dud_bolt.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/eeth_koth.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/ef76_nebulon-b_escort_frigate.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/emergency_firespeeder.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/executor.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/finis_valorum.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/flitknot_speeder.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/gasgano.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/geonosian_starfighter.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/greedo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/gregar_typho.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/grievous.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/h-type_nubian_yacht.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/han_solo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/ig-88.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/imperial_shuttle.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/imperial_speeder_bike.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/j-type_diplomatic_barge.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/jabba_desilijic_tiure.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/jango_fett.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/jar_jar_binks.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/jedi_interceptor.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/jedi_starfighter.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/jek_tono_porkins.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/jocasta_nu.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/ki-adi-mundi.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/kit_fisto.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/koro-2_exodrive_airspeeder.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/laat_c.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/laat_i.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/lama_su.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/lando_calrissian.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/leia_organa.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/lobot.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/luke_skywalker.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/luminara_unduli.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/mace_windu.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/mas_amedda.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/millennium_falcon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/mon_mothma.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/multi-troop_transport.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/naboo_fighter.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/naboo_royal_starship.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/naboo_star_skiff.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/neimoidian_shuttle.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/nien_nunb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/nute_gunray.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/obi-wan_kenobi.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/oevvaor_jet_catamaran.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/owen_lars.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/padme_amidala.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/palpatine.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/plo_koon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/poggle_the_lesser.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/quarsh_panaka.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/r2-d2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/r4-p17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/r5-d4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/raddaugh_gnasp_fluttercraft.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/ratts_tyerel.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/raymus_antilles.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/rebel_transport.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/republic_assault_ship.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/republic_attack_cruiser.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/republic_cruiser.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/ric_olie.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/roos_tarpals.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/rugor_nass.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/saesee_tiin.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/sail_barge.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/san_hill.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/sand_crawler.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/scimitar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/sebulba.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/sentinel-class_landing_craft.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/shaak_ti.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/shmi_skywalker.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/single_trooper_aerial_platform.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/sith_speeder.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/slave_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/sly_moore.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/snowspeeder.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/solar_sailer.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/spha.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/star_destroyer.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/storm_iv_twin-pod_cloud_car.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/t-16_skyhopper.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/tarfful.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/taun_we.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/theta-class_t-2c_shuttle.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/tie_advanced_x1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/tie_bomber.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/tie_in_interceptor.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/tie_ln_starfighter.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/tion_medon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/trade_federation_cruiser.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/tribubble_bongo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/tsmeu-6_personal_wheel_bike.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/v-wing.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/vulture_droid.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/wat_tambor.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/watto.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/wedge_antilles.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/wicket_systri_warrick.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/wilhuff_tarkin.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/x-34_landspeeder.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/x-wing.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/xj-6_airspeeder.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/y-wing.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/yarael_poof.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/yoda.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/zam_wesell.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swapi/public/zephyr-g_swoop_bike.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/angular2book.iml" afterPath="$PROJECT_DIR$/.idea/angular2book.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SUMMARY.md" afterPath="$PROJECT_DIR$/SUMMARY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events-and-refs/README.md" afterPath="$PROJECT_DIR$/events-and-refs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/first-component/README.md" afterPath="$PROJECT_DIR$/first-component/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hello-world/README.md" afterPath="$PROJECT_DIR$/hello-world/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/README.md" afterPath="$PROJECT_DIR$/http/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/src/home/home.component.ts" afterPath="$PROJECT_DIR$/http/src/home/home.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http/src/services/starwars.service.ts" afterPath="$PROJECT_DIR$/http/src/services/starwars.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/injecting-services/README.md" afterPath="$PROJECT_DIR$/injecting-services/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smart-and-dumb-components/README.md" afterPath="$PROJECT_DIR$/smart-and-dumb-components/README.md" />
+    </list>
+    <ignored path="angular2book.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="angular2book" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/injecting-services/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="1217">
+                <caret line="174" column="6" selection-start-line="174" selection-start-column="6" selection-end-line="174" selection-end-column="6" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/_book/first-component/config.js" />
+        <option value="$PROJECT_DIR$/first-component/src/components/first-component.ts" />
+        <option value="$PROJECT_DIR$/first-component/src/components/first.component.ts" />
+        <option value="$PROJECT_DIR$/first-component/src/app.ts" />
+        <option value="$PROJECT_DIR$/smart-and-dumb-components/src/components/dumb-component.ts" />
+        <option value="$PROJECT_DIR$/smart-and-dumb-components/src/smart-component.ts" />
+        <option value="$PROJECT_DIR$/smart-and-dumb-components/src/app.ts" />
+        <option value="$PROJECT_DIR$/events-and-refs/src/app.ts" />
+        <option value="$PROJECT_DIR$/events-and-refs/src/components/example.component.ts" />
+        <option value="$PROJECT_DIR$/smart-and-dumb-components/src/components/dumb.component.ts" />
+        <option value="$PROJECT_DIR$/install/README.md" />
+        <option value="$PROJECT_DIR$/smart-and-dumb-components/src/injectable.ts" />
+        <option value="$PROJECT_DIR$/smart-and-dumb-components/tsconfig.json" />
+        <option value="$PROJECT_DIR$/smart-and-dumb-components/src/smart.component.ts" />
+        <option value="$PROJECT_DIR$/injecting-services/src/simpleservice.service.ts" />
+        <option value="$PROJECT_DIR$/injecting-services/dist/simpleservice.service.js" />
+        <option value="$PROJECT_DIR$/injecting-services/tsconfig.json" />
+        <option value="$PROJECT_DIR$/injecting-services/before-and-after-injectable.js" />
+        <option value="$PROJECT_DIR$/injecting-services/src/main.ts" />
+        <option value="$PROJECT_DIR$/injecting-services/src/services/main.servics.ts" />
+        <option value="$PROJECT_DIR$/injecting-services/src/services/mail.service.ts" />
+        <option value="$PROJECT_DIR$/injecting-services/src/app.ts" />
+        <option value="$PROJECT_DIR$/injecting-services/src/components/dumb.component.ts" />
+        <option value="$PROJECT_DIR$/injecting-services/src/smart.component.ts" />
+        <option value="$PROJECT_DIR$/swapi/app.js" />
+        <option value="$PROJECT_DIR$/http/src/services/mail.service.ts" />
+        <option value="$PROJECT_DIR$/http/src/app.ts" />
+        <option value="$PROJECT_DIR$/http/src/timer.ts" />
+        <option value="$PROJECT_DIR$/ngFor/src/app.ts" />
+        <option value="$PROJECT_DIR$/ngFor/src/home/components/person.component.ts" />
+        <option value="$PROJECT_DIR$/ngFor/src/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/ngFor/README.md" />
+        <option value="$PROJECT_DIR$/hello-world/index.html" />
+        <option value="$PROJECT_DIR$/hello-world/src/main.ts" />
+        <option value="$PROJECT_DIR$/node_modules/gitbook-plugin-include-codeblock/lib/parser.js" />
+        <option value="$PROJECT_DIR$/first-component/README.md" />
+        <option value="$PROJECT_DIR$/events-and-refs/README.md" />
+        <option value="$PROJECT_DIR$/smart-and-dumb-components/README.md" />
+        <option value="$PROJECT_DIR$/http/README.md" />
+        <option value="$PROJECT_DIR$/http/src/services/starwars.service.ts" />
+        <option value="$PROJECT_DIR$/http/src/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/book.json" />
+        <option value="$PROJECT_DIR$/new-project/README.md" />
+        <option value="$PROJECT_DIR$/hello-world/README.md" />
+        <option value="$PROJECT_DIR$/SUMMARY.md" />
+        <option value="$PROJECT_DIR$/copy.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/cheatsheet.html" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/injecting-services/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="no node_modules" pattern="!file[angular2book]:node_modules//*" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="3024" />
+    <option name="height" value="1954" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular2book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular2book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular2book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular2book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular2book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="injecting-services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="Settings.MultiMarkdown.Application" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SearchEverywhereHistoryKey" value="book.json&#9;FILE&#9;file://C:/Users/johnl/WebstormProjects/angular2book/book.json&#10;term&#9;ACTION&#9;ActivateTerminalToolWindow&#10;armor&#9;ACTION&#9;ActivateArmoryToolWindow&#10;terminal&#9;ACTION&#9;ActivateTerminalToolWindow" />
+    <property name="nodejs_interpreter_path" value="C:\Program Files\nodejs\node" />
+    <property name="typescript-compiler-editor-notification" value="false" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\John Lindquist\WebstormProjects\angular2book\http\src\home" />
+      <recent name="C:\Users\John Lindquist\WebstormProjects\angular2book\injecting-services\src" />
+      <recent name="C:\Users\John Lindquist\WebstormProjects\angular2book" />
+      <recent name="C:\Users\John Lindquist\WebstormProjects\angular2book\install" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\johnl\WebstormProjects\angular2book" />
+      <recent name="C:\Users\John Lindquist\WebstormProjects\angular2book" />
+      <recent name="C:\Users\John Lindquist\WebstormProjects\angular2book\smart-and-dumb-components" />
+      <recent name="C:\Users\John Lindquist\WebstormProjects\angular2book\install" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.server.js">
+    <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.server.js" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.server.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68ee7087-66c8-444b-a0a6-492fb9baadec" name="Default" comment="" />
+      <created>1459462847644</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1459462847644</updated>
+      <workItem from="1459462848819" duration="3978000" />
+      <workItem from="1459809389224" duration="24387000" />
+      <workItem from="1459949942757" duration="8073000" />
+      <workItem from="1459966192879" duration="28000" />
+      <workItem from="1459987720560" duration="796000" />
+      <workItem from="1459988595530" duration="2730000" />
+      <workItem from="1460044259462" duration="1698000" />
+      <workItem from="1460992426131" duration="14902000" />
+      <workItem from="1462026201635" duration="2631000" />
+      <workItem from="1462031978188" duration="8000" />
+      <workItem from="1462032087735" duration="8531000" />
+      <workItem from="1462059507466" duration="3974000" />
+    </task>
+    <task id="LOCAL-00001" summary="shrinkwrapping versions">
+      <created>1459872935832</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1459872935832</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adding more chapters/writing">
+      <created>1459991580472</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1459991580472</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adding smart/dumb, injecting, http, and SWAPI services">
+      <created>1460998779313</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1460998779313</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding Http section">
+      <created>1461015704559</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1461015704559</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adding Http section">
+      <created>1462032325424</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1462032325424</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="71736000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-12" y="-12" width="3024" height="1954" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.141" sideWeight="0.49618322" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26379624" sideWeight="0.5020855" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19063546" sideWeight="0.15625" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.45112783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="234" y="227" width="2524" height="904" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2626008" sideWeight="0.4979145" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905772" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Armory" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30572918" sideWeight="0.84375" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="shrinkwrapping versions" />
+    <MESSAGE value="Adding more chapters/writing" />
+    <MESSAGE value="Adding smart/dumb, injecting, http, and SWAPI services" />
+    <MESSAGE value="Adding Http section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Http section" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/first-component/src/components/first.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events-and-refs/src/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events-and-refs/src/components/example.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editor/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="123">
+            <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smart-and-dumb-components/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smart-and-dumb-components/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smart-and-dumb-components/src/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smart-and-dumb-components/src/smart.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/injecting-services/dist/simpleservice.service.js" />
+    <entry file="file://$PROJECT_DIR$/injecting-services/src/simpleservice.service.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/angular2/src/core/di/decorators.d.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/angular2/src/core/di/metadata.d.ts" />
+    <entry file="file://$PROJECT_DIR$/injecting-services/before-and-after-injectable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1681">
+          <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/injecting-services/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GITBOOK-NOTES.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/injecting-services/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/injecting-services/src/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/injecting-services/src/components/dumb.component.ts" />
+    <entry file="file://$PROJECT_DIR$/injecting-services/src/services/mail.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/injecting-services/src/smart.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swapi/package.json" />
+    <entry file="file://$PROJECT_DIR$/swapi/app.js" />
+    <entry file="file://$PROJECT_DIR$/http/src/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/src/timer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ngFor/src/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ngFor/src/home/components/person.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ngFor/src/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ngFor/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ngFor/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-394">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hello-world/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hello-world/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gitbook-plugin-include-codeblock/lib/parser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1076">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events-and-refs/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="479">
+            <caret line="101" column="3" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smart-and-dumb-components/src/components/dumb.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smart-and-dumb-components/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="656">
+            <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/src/services/starwars.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/src/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <marker date="1462054023273" expanded="true" signature="0:151" placeholder="{&quot;gitbook&quot;: &quot;3.0.0-pre.9&quot;...}" />
+            <marker date="1462054023273" expanded="true" signature="43:149" placeholder="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new-project/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/copy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+          <folding>
+            <marker date="1462061048206" expanded="true" signature="0:2247" placeholder="{&quot;name&quot;: &quot;angular2book&quot;...}" />
+            <marker date="1462061048206" expanded="true" signature="110:723" placeholder="{&quot;@ngrx/store&quot;: &quot;^1.3.3&quot;...}" />
+            <marker date="1462061048206" expanded="true" signature="746:1047" placeholder="{&quot;browser-sync&quot;: &quot;^2.11.2&quot;...}" />
+            <marker date="1462061048206" expanded="true" signature="1062:1720" placeholder="{&quot;wp-build&quot;: &quot;webpack ./app --progress --profile --colors --display-error-details --display-cached&quot;...}" />
+            <marker date="1462061048206" expanded="true" signature="1733:2209" placeholder="{&quot;app-bundle-id&quot;: &quot;io.egghead.angular2book&quot;...}" />
+            <marker date="1462061048206" expanded="true" signature="1964:2205" placeholder="{...}" />
+            <marker date="1462061048206" expanded="true" signature="1984:2199" placeholder="[...]" />
+            <marker date="1462061048206" expanded="true" signature="1994:2105" placeholder="{&quot;x&quot;: 410...}" />
+            <marker date="1462061048206" expanded="true" signature="2115:2191" placeholder="{&quot;x&quot;: 130...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1476">
+            <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cheatsheet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1722">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="697">
+            <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hello-world/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="626">
+            <caret line="20" column="16" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="16" />
+            <folding>
+              <marker date="1462060197801" expanded="true" signature="415:761" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="1054:1182" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="1390:1475" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="1808:1984" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="2436:2464" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="2486:2552" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="3321:3364" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="3388:3436" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="3493:3639" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="3655:3814" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="4065:4102" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="4131:4175" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="4248:4294" placeholder="..." />
+              <marker date="1462060197801" expanded="true" signature="4323:4377" placeholder="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first-component/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="2460">
+            <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+            <folding>
+              <marker date="1462032945990" expanded="true" signature="2349:2431" placeholder="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="9" />
+            <folding>
+              <marker date="1462052613300" expanded="true" signature="641:803" placeholder="..." />
+              <marker date="1462052613300" expanded="true" signature="899:1059" placeholder="..." />
+              <marker date="1462052613300" expanded="true" signature="1202:1332" placeholder="..." />
+              <marker date="1462052613300" expanded="true" signature="1466:1580" placeholder="..." />
+              <marker date="1462052613300" expanded="true" signature="1830:2055" placeholder="..." />
+              <marker date="1462052613300" expanded="true" signature="2213:2292" placeholder="..." />
+              <marker date="1462052613300" expanded="true" signature="2489:2522" placeholder="..." />
+              <marker date="1462052613300" expanded="true" signature="2757:2934" placeholder="..." />
+              <marker date="1462052613300" expanded="true" signature="3047:3278" placeholder="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/injecting-services/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1217">
+            <caret line="174" column="6" selection-start-line="174" selection-start-column="6" selection-end-line="174" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>no node_modules</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20199063" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="no node_modules" />
+          </order>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,517 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>07. Injecting Services · Angular 2 Workshop Handbook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="You can provide anything you need into your Angular 2 application,
+but you&#39;ll typically be injecting Services as classes. You mark
+your Service with the @Injectable() decorator, add it to the
+smart component&#39;s providers:[] where you&#39;ll need it, then inject
+it into the constructor of the Component...">
+        <meta name="generator" content="GitBook 3.0.0-pre.9">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../http/" />
+    
+    
+    <link rel="prev" href="../ngFor/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        
+        <nav role="navigation">
+            <ul class="summary">
+                
+                
+
+                
+
+                
+                    
+                    
+    
+        <li class="chapter " data-level="0" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="../new-project/">
+            
+                <a href="../new-project/">
+            
+                    
+                    00. New Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="../hello-world/">
+            
+                <a href="../hello-world/">
+            
+                    
+                    01. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="../first-component/">
+            
+                <a href="../first-component/">
+            
+                    
+                    02. First Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="../events-and-refs/">
+            
+                <a href="../events-and-refs/">
+            
+                    
+                    03. Events and Refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="../smart-and-dumb-components/">
+            
+                <a href="../smart-and-dumb-components/">
+            
+                    
+                    04. Smart and Dumb Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="../built-in-directives/">
+            
+                <a href="../built-in-directives/">
+            
+                    
+                    05. Built-in Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="../ngFor/">
+            
+                <a href="../ngFor/">
+            
+                    
+                    06. Repeating Elements with ngFor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    07. Injecting Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    08. Loading Data with Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+                
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                        Published with GitBook
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >07. Injecting Services</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="injecting-services">Injecting Services</h1>
+<h2 id="tldr">TL;DR</h2>
+<ul>
+<li>Services are usually classes</li>
+<li>Services are injected into <code>providers: []</code></li>
+<li>Injecting into <code>bootstrap</code> is meant to &quot;override&quot; other injections</li>
+<li>Inject into &quot;Smart&quot; components, not &quot;Dumb&quot; ones</li>
+</ul>
+<h2 id="injecting-services">Injecting Services</h2>
+<p>You can provide anything you need into your Angular 2 application,
+but you&apos;ll typically be injecting <code>Service</code>s as <code>class</code>es. You mark
+your <code>Service</code> with the <code>@Injectable()</code> decorator, add it to the
+smart component&apos;s <code>providers:[]</code> where you&apos;ll need it, then inject
+it into the <code>constructor</code> of the <code>Component</code> where it will be used.</p>
+<h3 id="create-a-service">Create a Service</h3>
+<p>Open a new file, create a <code>class</code>, done <img align="absmiddle" alt=":wink:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/wink.png" title=":wink:">. Something as simple
+as the following will work just fine:</p>
+<pre><code class="lang-js"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ExampleService</span><span class="token punctuation">{</span>
+    message <span class="token operator">=</span> <span class="token string">&quot;hi&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="decorate-your-service-with-injectable">Decorate Your Service with <code>@Injectable()</code></h3>
+<p>The <code>@Injectable()</code> decorator is required so that Angular 2 has the 
+proper Metadata to be able to properly register your service with the 
+<code>Injector</code>. You don&apos;t need to worry about the metadata, it&apos;s handled
+during compilation from TypeScript to JavaScript. (This is also why 
+<code>&quot;emitDecoratorMetadata&quot;: true,</code> is required in your <code>tsconfig.json</code> 
+when compiling down your TypeScript.)</p>
+<pre><code class="lang-js">@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ExampleService</span><span class="token punctuation">{</span>
+    message <span class="token operator">=</span> <span class="token string">&quot;hi&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="provide-your-service-to-a-smart-component">Provide Your Service to a Smart Component</h3>
+<p>Each <code>@Component</code> decorator has a <code>providers:[]</code> array where you place
+the classes you want to inject.</p>
+<p>To provide your <code>ExampleService</code> to an <code>App</code> Component:</p>
+<pre><code class="lang-js">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;app&apos;</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>ExampleService<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `I&apos;m an App Component`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<h3 id="inject-into-the-constructor-of-the-smart-component">Inject Into the Constructor of the Smart Component</h3>
+<p>The last step before you can actually use the Service is to inject it
+into the constructor of the Component.</p>
+<pre><code class="lang-js">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;app&apos;</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>ExampleService<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `Hi`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>exampleService<span class="token punctuation">:</span>ExampleService<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>exampleService<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//logs &quot;hi&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>This <code>ExampleService</code> will now be available to this component and all
+its children components. Remember, services are injected into &quot;smart&quot;
+components. If you need a value from the service in a &quot;dumb&quot; component,
+inject the service into a smart component, then use an <code>@Input()</code> on the
+&quot;dumb&quot; component:</p>
+<pre><code class="lang-js">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span><span class="token string">&apos;dumb&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        <span class="token punctuation">{</span><span class="token punctuation">{</span>message<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">--</span> <span class="token string">&quot;hi&quot;</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">Dumb</span><span class="token punctuation">{</span>
+    @Input message<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;smart&apos;</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>ExampleService<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    directives<span class="token punctuation">:</span> <span class="token punctuation">[</span>Dumb<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span>`<span class="token operator">&lt;</span>dumb <span class="token punctuation">[</span>message<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;exampleService.message&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>dumb<span class="token operator">&gt;</span>`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">SmartComponent</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">public</span> exampleService<span class="token punctuation">:</span>ExampleService<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="show-me-the-code">Show Me the Code</h2>
+<blockquote>
+<p><code>src/services/mail.service.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Injectable<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MailService</span><span class="token punctuation">{</span>
+    message <span class="token operator">=</span> `You won a <span class="token keyword">new</span> <span class="token class-name">car</span><span class="token operator">!</span>`<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><code>src/app.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Smart<span class="token punctuation">}</span> from <span class="token string">&apos;./smart.component&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>MailService<span class="token punctuation">}</span> from <span class="token string">&apos;./services/mail.service&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;app&apos;</span><span class="token punctuation">,</span>
+    providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>MailService<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    directives<span class="token punctuation">:</span><span class="token punctuation">[</span>Smart<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        <span class="token operator">&lt;</span>smart<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>smart<span class="token operator">&gt;</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><code>src/smart.component.ts</code></p>
+</blockquote>
+<pre><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>MailService<span class="token punctuation">}</span> from <span class="token string">&apos;./services/mail.service&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    selector<span class="token punctuation">:</span> <span class="token string">&apos;smart&apos;</span><span class="token punctuation">,</span>
+    template<span class="token punctuation">:</span> `
+        You received a message<span class="token punctuation">:</span> <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>mailService<span class="token punctuation">.</span>message<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+    `
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Smart</span><span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">public</span> mailService<span class="token punctuation">:</span>MailService<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="whats-that-syntax">What&apos;s That Syntax?</h2>
+<h3 id="constructorpublic-foo"><code>constructor(public foo)</code></h3>
+<p>Using <code>public</code> before the <code>foo</code> parameter is syntax sugar for property
+assignment.</p>
+<p>The following two examples are <strong><em>exactly the same</em></strong>:</p>
+<pre><code class="lang-js"><span class="token keyword">class</span> <span class="token class-name">Example</span><span class="token punctuation">{</span>
+    foo<span class="token punctuation">;</span>
+
+    <span class="token function">constructor</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>foo <span class="token operator">=</span> foo<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre><code class="lang-js"><span class="token keyword">class</span> <span class="token class-name">Example</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">public</span> foo<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>So using <code>public</code> saves you a few keystrokes.</p>
+<h3 id="constructorfoobar"><code>constructor(foo:Bar)</code></h3>
+<p><code>Bar</code> is a <code>Type</code>. During compilation, TypeScript will take the metadata from that
+<code>Type</code> then the <code>Injector</code> can look it up so it can find the matching value/class 
+to provide into the constructor. This requires <code>emitDecoratorMetadata</code> to be
+set in your <code>.tsconfig.json</code>.</p>
+<p>An altenate approach is to use <code>constructor(@Inject(Bar) foo)</code> where you rely on the
+<code>@Inject()</code> decorator to provide the proper values.</p>
+<p>Both of the following examples achieve the same result:</p>
+<p>Injection using <code>Type</code>
+<code>constructor(foo:Bar)</code></p>
+<p>Injection using <code>@Inject()</code>
+<code>constructor(@Inject(Bar) foo)</code></p>
+<h3 id="importing-vs-injecting">Importing vs. Injecting</h3>
+<p>It&apos;s easy to get confused between <code>import</code> and Injecting, but they&apos;re
+not at all the same thing.</p>
+<p>Importing (using the <code>import</code> keyword) is simply how JavaScript shares
+code across files.</p>
+<p>Injecting is Angular 2 specific and happens during &quot;runtime&quot; (when your 
+application is running in the browser) and is how you share values/instances 
+across your application.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+        </div>
+        <div class="no-results">
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ngFor/" class="navigation navigation-prev " aria-label="Previous page: 06. Repeating Elements with ngFor">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../http/" class="navigation navigation-next " aria-label="Next page: 08. Loading Data with Http">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"You can provide anything you need into your Angular 2 application,\nbut you'll typically be injecting Services as classes. You mark\nyour Service with the @Injectable() decorator, add it to the\nsmart component's providers:[] where you'll need it, then inject\nit into the constructor of the Component...","title":"07. Injecting Services","next":{"level":"9","title":"08. Loading Data with Http","depth":1,"path":"http/README.md","anchor":null},"previous":{"level":"7","title":"06. Repeating Elements with ngFor","depth":1,"path":"ngFor/README.md","anchor":null},"level":"8","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"injecting-services/README.md","mtime":"2016-05-01T00:44:40.573Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-01T00:44:47.320Z","generator":"website"},"basePath":"..","book":{}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+
