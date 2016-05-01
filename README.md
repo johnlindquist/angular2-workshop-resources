@@ -1,5 +1,4 @@
-# Star Wars API w/ JSON-Server
-All credit to http://swapi.co and https://github.com/typicode/json-server
+# Egghead.io - Angular 2 Workshop Resources
 
 ## Setup
 - Clone or fork this repository
