@@ -218,6 +218,45 @@ started on the path to becoming an Angular 2 expert .">
             
         </li>
     
+        <li class="chapter " data-level="10" data-path="pipes/">
+            
+                <a href="pipes/">
+            
+                    
+                    09. Pipes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="routing/">
+            
+                <a href="routing/">
+            
+                    
+                    10. Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="exercises.html">
+            
+                <a href="exercises.html">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
 
                 
 
@@ -263,6 +302,19 @@ started on the path to becoming an Angular 2 expert .">
                                 <h1 id="angular-2-workshop-handbook">Angular 2 Workshop Handbook</h1>
 <p>Hi! Welcome to the Angular 2 Handbook! This book will get you
 started on the path to becoming an Angular 2 expert <img align="absmiddle" alt=":thumbsup:" class="emoji" src="gitbook/gitbook-plugin-advanced-emoji/emojis/thumbsup.png" title=":thumbsup:">.</p>
+<h2 id="the-schedule">The Schedule</h2>
+<ul>
+<li><em>10am</em>-  Hello World</li>
+<li><em>10:30am</em>-  First Component</li>
+<li><em>11pm</em>-  Events and Refs</li>
+<li><em>12pm</em>-  Lunch Break</li>
+<li><em>1pm</em>-  Smart and Dumb Components</li>
+<li><em>2pm</em>-  Built-in Directives</li>
+<li><em>2:30pm</em>-  Repeating Elements with ngFor</li>
+<li><em>3pm</em>-  Injecting Services</li>
+<li><em>4pm</em>-  Loading Data with Http</li>
+</ul>
+<p>I&apos;m sure some people will work ahead <img align="absmiddle" alt=":smile:" class="emoji" src="gitbook/gitbook-plugin-advanced-emoji/emojis/smile.png" title=":smile:"></p>
 <h2 id="the-star-wars-services">The Star Wars Services!</h2>
 <p>Load people, starships, and vehicles!</p>
 <ul>
@@ -279,6 +331,10 @@ started on the path to becoming an Angular 2 expert <img align="absmiddle" alt="
 <li><a href="http://localhost:4000/luke_skywalker.jpg" target="_blank">http://localhost:4000/luke_skywalker.jpg</a></li>
 </ul>
 <p><img src="http://localhost:4000/luke_skywalker.jpg" alt="Luke Skywalker" title="Luke Skywalker"></p>
+<h2 id="issues-"><img align="absmiddle" alt=":heart:" class="emoji" src="gitbook/gitbook-plugin-advanced-emoji/emojis/heart.png" title=":heart:"> Issues? <img align="absmiddle" alt=":heart:" class="emoji" src="gitbook/gitbook-plugin-advanced-emoji/emojis/heart.png" title=":heart:"></h2>
+<p>I love bug reports!
+<a href="https://github.com/johnlindquist/angular2-workshop/issues" target="_blank">https://github.com/johnlindquist/angular2-workshop/issues</a></p>
+<p>I&apos;ll make sure to clean them up <img align="absmiddle" alt=":smile:" class="emoji" src="gitbook/gitbook-plugin-advanced-emoji/emojis/smile.png" title=":smile:"></p>
 <h4 id="the-angular-2-cheatsheet">The Angular 2 Cheatsheet</h4>
 <p>This is a great reference to have open to while your learning all
 the new syntax:</p>
@@ -292,6 +348,22 @@ the new syntax:</p>
 <li><strong>What&apos;s that Sytax?</strong> - Explanation of JavaScript, TypeScript, or
 Angular 2 template syntax that might be new</li>
 </ol>
+<h2 id="this-workshop-is-using-angular-2-beta17"><img align="absmiddle" alt=":warning:" class="emoji" src="gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:"> This workshop is using Angular 2 beta.17</h2>
+<h3 id="upcoming-changes">Upcoming changes</h3>
+<p>ngFor syntax:</p>
+<pre><code class="lang-js"><span class="token operator">*</span>ngFor<span class="token operator">=</span><span class="token string">&quot;#person of people&quot;</span>
+</code></pre>
+<p>will be</p>
+<pre><code class="lang-js"><span class="token operator">*</span>ngFor<span class="token operator">=</span><span class="token string">&quot;let person of people&quot;</span>
+</code></pre>
+<p>Packaging changing:</p>
+<p>Something like the following? Pay attention at the conference :)</p>
+<pre><code class="lang-js"><span class="token string">&quot;@angular/common&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;0.0.0-0&quot;</span><span class="token punctuation">,</span>
+<span class="token string">&quot;@angular/compiler&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;0.0.0-0&quot;</span><span class="token punctuation">,</span>
+<span class="token string">&quot;@angular/core&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;0.0.0-0&quot;</span><span class="token punctuation">,</span>
+<span class="token string">&quot;@angular/platform-browser&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;0.0.0-0&quot;</span><span class="token punctuation">,</span>
+<span class="token string">&quot;@angular/platform-browser-dynamic&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;0.0.0-0&quot;</span><span class="token punctuation">,</span>
+</code></pre>
 
                                 
                                 </section>
@@ -327,7 +399,7 @@ Angular 2 template syntax that might be new</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert .","title":"Introduction","next":{"level":"1","title":"00. New Project","depth":1,"path":"new-project/README.md","anchor":null},"previous":null,"level":"0","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2016-05-01T01:04:28.566Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-01T01:04:32.617Z","generator":"website"},"basePath":".","book":{}});
+            gitbook.page.hasChanged({"page":{"description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert .","title":"Introduction","next":{"level":"1","title":"00. New Project","depth":1,"path":"new-project/README.md","anchor":null},"previous":null,"level":"0","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2016-05-02T21:32:51.111Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-02T21:32:55.503Z","generator":"website"},"basePath":".","book":{}});
         });
     </script>
 </div>

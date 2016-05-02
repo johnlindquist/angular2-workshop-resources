@@ -1,0 +1,693 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Exercises · Angular 2 Workshop Handbook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The numbers folders 01-10 can be renamed at any time to catch up.
+For example, rename 07 to src then restart your npm start to
+catch up to Exercise 7.">
+        <meta name="generator" content="GitBook 3.0.0-pre.9">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="routing/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        
+        <nav role="navigation">
+            <ul class="summary">
+                
+                
+
+                
+
+                
+                    
+                    
+    
+        <li class="chapter " data-level="0" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="new-project/">
+            
+                <a href="new-project/">
+            
+                    
+                    00. New Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="hello-world/">
+            
+                <a href="hello-world/">
+            
+                    
+                    01. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="first-component/">
+            
+                <a href="first-component/">
+            
+                    
+                    02. First Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="events-and-refs/">
+            
+                <a href="events-and-refs/">
+            
+                    
+                    03. Events and Refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="smart-and-dumb-components/">
+            
+                <a href="smart-and-dumb-components/">
+            
+                    
+                    04. Smart and Dumb Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="built-in-directives/">
+            
+                <a href="built-in-directives/">
+            
+                    
+                    05. Built-in Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="ngFor/">
+            
+                <a href="ngFor/">
+            
+                    
+                    06. Repeating Elements with ngFor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="injecting-services/">
+            
+                <a href="injecting-services/">
+            
+                    
+                    07. Injecting Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="http/">
+            
+                <a href="http/">
+            
+                    
+                    08. Loading Data with Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="pipes/">
+            
+                <a href="pipes/">
+            
+                    
+                    09. Pipes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="routing/">
+            
+                <a href="routing/">
+            
+                    
+                    10. Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="12" data-path="exercises.html">
+            
+                <a href="exercises.html">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+                
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                        Published with GitBook
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Exercises</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="angular-2-starwars-party">Angular 2 StarWars Party</h2>
+<h3 id="workshop-resources">Workshop Resources</h3>
+<ul>
+<li><a href="https://angular.io/docs/ts/latest/cheatsheet.html" target="_blank">Angular 2 Cheat Sheet</a></li>
+<li><a href="http://hackerthemes.com/bootstrap-cheatsheet/" target="_blank">Bootstrap 4 Cheat Sheet</a></li>
+<li><a href="https://fortawesome.github.io/Font-Awesome/icons/" target="_blank">Font Awesome Cheat Sheet</a></li>
+</ul>
+<h3 id="completed-exercises">Completed Exercises</h3>
+<p>The numbers folders 01-10 can be renamed at any time to catch up.
+For example, rename <code>07</code> to <code>src</code> then restart your <code>npm start</code> to
+catch up to Exercise 7.</p>
+<h3 id="exercise-00---setup">Exercise 00 - Setup</h3>
+<ul>
+<li>Clone or fork this repository</li>
+<li>Make sure you have <a href="https://nodejs.org/" target="_blank">node.js</a> installed</li>
+<li>run <code>npm install -g webpack webpack-dev-server typings typescript</code> to install global dependencies</li>
+<li>run <code>npm install</code> to install dependencies</li>
+<li>run <code>npm start</code> to fire up dev server</li>
+<li>open browser to <a href="http://localhost:3000" target="_blank"><code>http://localhost:3000</code></a></li>
+</ul>
+<h4 id="set-up-the-starwars-server">Set up the StarWars server</h4>
+<ul>
+<li>Install and run <a href="https://github.com/johnlindquist/swapi-json-server" target="_blank">https://github.com/johnlindquist/swapi-json-server</a></li>
+<li>open browser to <a href="http://localhost:4000" target="_blank"><code>http://localhost:4000</code></a></li>
+</ul>
+<h3 id="exercise-01---hello-world">Exercise 01 - Hello World</h3>
+<ul>
+<li>Notice the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app</span><span class="token punctuation">&gt;</span></span></code> tag in <code>index.html</code></li>
+<li>Delete everything in <code>app.ts</code></li>
+<li>Write a <code>@Component</code> with a selector of <code>&apos;app&apos;</code></li>
+<li>Create a basic <code>template</code></li>
+<li>Remember to <code>export</code> your <code>class</code></li>
+</ul>
+<h3 id="exercise-02---create-a-component">Exercise 02 - Create a Component</h3>
+<ul>
+<li>Create a <code>components</code> directory</li>
+<li>Add a file called <code>home.ts</code></li>
+<li>Create a <code>@Component</code> and <code>export</code> it</li>
+<li>Import your component into <code>app.ts</code></li>
+<li>Include the component with <code>directives:[Home]</code></li>
+<li>Add the component to your <code>template</code> with <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home</span><span class="token punctuation">&gt;</span></span></code></li>
+</ul>
+<h3 id="exercise-03---handling-clicks-and-refs">Exercise 03 - Handling Clicks and Refs</h3>
+<h4 id="logging-an-event">Logging an event</h4>
+<ul>
+<li>Create a button in your <code>Home</code> component</li>
+<li>Handle the click with a <code>(click)=onClick($event)</code></li>
+<li>Log out the event</li>
+</ul>
+<h4 id="logging-an-input">Logging an Input</h4>
+<ul>
+<li>Create an <code>input</code></li>
+<li>Reference the <code>input</code> with a <code>#i</code></li>
+<li>Pass the value with <code>#i.value</code> of the input to the <code>onClick</code></li>
+<li>Log out the value</li>
+</ul>
+<h3 id="exercise-04---smart-and-dumb-components">Exercise 04 - Smart and Dumb Components</h3>
+<h4 id="inputs">Inputs</h4>
+<ul>
+<li>Add a <code>people = [{name:&quot;John&quot;}];</code> to your <code>Home</code> component</li>
+<li>Create a <code>PersonList</code> component</li>
+<li>Add the <code>PersonList</code> to your <code>Home</code> component</li>
+<li>Create an <code>@Input</code> called <code>people</code> (remember to import it)</li>
+<li>Push <code>people</code> from <code>Home</code> into <code>PersonList</code> with <code>[people]=people</code></li>
+<li>Render the first person from the <code>@Input</code> with <code>{{people[0].name}}</code></li>
+</ul>
+<h4 id="outputs">Outputs</h4>
+<ul>
+<li>Move the <code>input</code> and the <code>button</code> to the <code>PersonList</code></li>
+<li>Create an <code>@Output()</code> called <code>select</code></li>
+<li>Call <code>this.select.next(value)</code> in the button&apos;s <code>onClick</code> handler</li>
+<li>Handle the <code>select</code> event in<code>Home</code> with <code>(selcect)=onSelect($event)</code></li>
+<li>Log out the input</li>
+</ul>
+<h3 id="exercise-05---templates-styles-and-built-in-directives">Exercise 05 - Templates, Styles, and Built-in Directives</h3>
+<h4 id="ngmodel"><code>NgModel</code></h4>
+<ul>
+<li>Add an <code>[(ngModel)]=&quot;name&quot;</code> to the <code>input</code></li>
+<li>Add a <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>{{name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span></code></li>
+<li>Type in the <code>input</code> to see the name appear in the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span></code></li>
+</ul>
+<h4 id="style"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span></code></h4>
+<ul>
+<li>Add a <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span></code> tag to the template</li>
+<li>Add a <code>.person { cursor: pointer; cursor: hand; }</code> style</li>
+<li>Add the <code>class=person</code> to your span</li>
+<li>Roll over your <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span></code> to see the hand cursor</li>
+</ul>
+<h4 id="ngif"><code>*ngIf</code></h4>
+<ul>
+<li>Add a <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fa fa-star<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span></code></li>
+<li>Add an <code>*ngIf=&quot;name&quot;</code> to the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">&gt;</span></span></code></li>
+<li>Type in the input to see the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">&gt;</span></span></code> appear</li>
+</ul>
+<h4 id="ngclass"><code>[ngClass]</code></h4>
+<ul>
+<li>Add <code>(mouseover)=&quot;isOver = true&quot; (mouseout)=&quot;isOver = false&quot;</code> to <code>span</code></li>
+<li>Add <code>class=&quot;fa&quot;</code> to the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">&gt;</span></span></code></li>
+<li>Add <code>[ngClass]=&quot;{&apos;fa-star&apos;:isOver, &apos;fa-star-o&apos;:!isOver}&quot;</code> to the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">&gt;</span></span></code></li>
+<li>Roll over the span to she the icon toggle</li>
+</ul>
+<h3 id="exercise-06---repeating-elements-with-ngfor">Exercise 06 - Repeating Elements with *ngFor</h3>
+<h4 id="ngfor"><code>*ngFor</code></h4>
+<ul>
+<li>Add more <code>people</code> to the <code>Home</code><pre><code class="lang-js">people <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span><span class="token string">&quot;Luke Skywalker&quot;</span><span class="token punctuation">,</span>
+    image<span class="token punctuation">:</span> <span class="token string">&quot;http://localhost:4000/luke_skywalker.jpg&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span><span class="token string">&quot;Darth Vader&quot;</span><span class="token punctuation">,</span>
+    image<span class="token punctuation">:</span> <span class="token string">&quot;http://localhost:4000/darth_vader.jpg&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span><span class="token string">&quot;Leia Organa&quot;</span><span class="token punctuation">,</span>
+    image<span class="token punctuation">:</span> <span class="token string">&quot;http://localhost:4000/leia_organa.jpg&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li>Add a <code>card</code> to the <code>PersonList</code><pre><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>card<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+&lt;img [src]=&quot;person.image&quot;&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>info<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span><span class="token punctuation">&gt;</span></span>{{person.name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>btn btn-primary<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fa fa-plus<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span> Add to Party<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+</li>
+</ul>
+<h4 id="loop-through-each-person-using-ngfor">Loop through each person using <code>*ngFor</code></h4>
+<ul>
+<li>Create a <code>Card</code> component</li>
+<li>Give the <code>Card</code> an <code>@Input()</code> of <code>person</code></li>
+<li>Add the <code>Card</code> to the <code>PersonList</code></li>
+<li>Add <code>*ngFor=&quot;#person of people&quot;</code> to the <code>card</code></li>
+<li>Update the <code>src</code> to <code>[src]=&quot;person.image&quot;</code></li>
+<li>Show the <code>person.name</code> in the <code>h4</code> with <code>{{person.name}}</code></li>
+</ul>
+<pre><code class="lang-js">
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Component<span class="token punctuation">,</span> Input<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  selector<span class="token punctuation">:</span> <span class="token string">&apos;card&apos;</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> `<span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+  <span class="token punctuation">.</span>card<span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    flex<span class="token operator">-</span>direction<span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+    align<span class="token operator">-</span>items<span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token punctuation">.</span>info<span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    flex<span class="token operator">-</span>basis<span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    justify<span class="token operator">-</span>content<span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    align<span class="token operator">-</span>items<span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    flex<span class="token operator">-</span>direction<span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>img <span class="token punctuation">[</span>src<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;person.image&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;info&quot;</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>h5<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h5<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;btn btn-primary&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;fa fa-plus&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span> Add to Party<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Card</span><span class="token punctuation">{</span>
+  @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> person<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="exercise-07---move-the-data-to-a-service">Exercise 07 - Move the Data to a Service</h3>
+<ul>
+<li>Create <code>services</code> directory</li>
+<li>Create a <code>StarWars.ts</code> file</li>
+<li>Use the <code>@Inject()</code> decorator on a <code>StarWars</code> class</li>
+<li>Move the <code>people</code> from the <code>Home</code> to the service</li>
+<li>Include the service in the <code>Home</code> <code>providers:[]</code></li>
+<li>Inject the service <code>constructor(public starWars:StarWars){}</code></li>
+<li>Use the service in the template <code>[people]=&quot;starWars.people&quot;</code></li>
+</ul>
+<h3 id="exercise-08---loading-data-with-http">Exercise 08 - Loading Data with Http</h3>
+<ul>
+<li>Add <code>providers: [HTTP_PROVIDERS],</code> to your <code>app.ts</code></li>
+<li>Import <code>import {Http} from &apos;angular2/http&apos;;</code> in your service</li>
+<li>Inject <code>Http</code> in your service <code>constructor(private _http:Http){}</code></li>
+<li>Delete the <code>people</code> array</li>
+<li>In the constructor, assign the people to an <code>http</code> request</li>
+<li>Use <code>http.get()</code> then <code>map</code> then response using <code>res =&gt; res.json()</code></li>
+<li><code>map</code> the images: <code>luke_skywalker.jpg</code> to <code>http://locahost:4000/luke_skywalker.jpg</code></li>
+</ul>
+<pre><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Injectable<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Http<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/http&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&apos;rxjs/add/operator/map&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> API <span class="token operator">=</span> <span class="token string">&apos;http://localhost:4000&apos;</span><span class="token punctuation">;</span>
+
+@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">StarWars</span><span class="token punctuation">{</span>
+  people<span class="token punctuation">;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> _http<span class="token punctuation">:</span>Http<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>people <span class="token operator">=</span> _http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>`$<span class="token punctuation">{</span>API<span class="token punctuation">}</span><span class="token operator">/</span>people`<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">&gt;</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//get the response as json</span>
+        <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>person <span class="token operator">=</span><span class="token operator">&gt;</span> 
+          Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>person<span class="token punctuation">,</span> <span class="token punctuation">{</span>image<span class="token punctuation">:</span> `$<span class="token punctuation">{</span>API<span class="token punctuation">}</span><span class="token operator">/</span>$<span class="token punctuation">{</span>person<span class="token punctuation">.</span>image<span class="token punctuation">}</span>`<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span>
+      <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Use an <code>| async</code> pipe to load the data in the template</p>
+<pre><code class="lang-js">  <span class="token punctuation">[</span>people<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;starWars.people | async&quot;</span>
+</code></pre>
+<h3 id="exercise-09---searching-data-with-a-pipe">Exercise 09 - Searching Data with a Pipe</h3>
+<h4 id="housekeeping">Housekeeping</h4>
+<ul>
+<li>Clean up <code>PersonList</code> template so only <code>input</code> and <code>card</code>s remain</li>
+</ul>
+<pre><code class="lang-js"><span class="token operator">&lt;</span>input <span class="token punctuation">[</span><span class="token punctuation">(</span>ngModel<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;name&quot;</span> type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span><span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card-container&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>card
+    <span class="token operator">*</span>ngFor<span class="token operator">=</span><span class="token string">&quot;#person of people&quot;</span>
+    <span class="token punctuation">[</span>person<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;person&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>card<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre>
+<h4 id="creating-a-pipe">Creating a Pipe</h4>
+<ul>
+<li>Create a <code>pipes</code> directory</li>
+<li>Create a <code>search.ts</code> file</li>
+<li>Create a <code>@Pipe()</code> called <code>Search</code></li>
+<li>Create your own searching logic<pre><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Pipe<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+@<span class="token function">Pipe</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+name<span class="token punctuation">:</span> <span class="token string">&apos;search&apos;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Search</span><span class="token punctuation">{</span>
+<span class="token function">transform</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> key<span class="token punctuation">,</span> term <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>data<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> data<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> item<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+      <span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>term<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="using-the-pipe">Using the Pipe</h4>
+<p>Add the <code>Search</code> to your <code>PersonList</code></p>
+<pre><code class="lang-js">pipes<span class="token punctuation">:</span><span class="token punctuation">[</span>Search<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre>
+<ul>
+<li>Add the <code>name</code> (&quot;search&quot;) of the <code>Search</code> pipe to the template</li>
+<li>Use <code>&apos;name&apos;</code> as the <code>key</code> to search on</li>
+<li>Use the <code>name</code> from the <code>[(ngModel)]=&quot;name&quot;</code> as the term<pre><code class="lang-js">#person of people <span class="token operator">|</span> search<span class="token punctuation">:</span><span class="token string">&apos;name&apos;</span><span class="token punctuation">:</span>name&quot;
+</code></pre>
+</li>
+</ul>
+<h3 id="exercise-10---adding-routes">Exercise 10 - Adding Routes</h3>
+<ul>
+<li>Add a <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>base</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span></code> to your <code>index.html</code> <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span></code></li>
+<li>Create a simple <code>Party</code> component with a <code>hello world</code> template</li>
+<li>Import all the required Router classes into <code>app.ts</code><pre><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>ROUTER_PROVIDERS<span class="token punctuation">,</span> RouteConfig<span class="token punctuation">,</span> RouterOutlet<span class="token punctuation">,</span> RouterLink<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/router&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+<li>Include <code>RouterOutlet</code> and <code>RouterLink</code> in your <code>directives:[]</code><pre><code class="lang-js">directives<span class="token punctuation">:</span> <span class="token punctuation">[</span>RouterOutlet<span class="token punctuation">,</span> RouterLink<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre>
+</li>
+<li>Replace <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>home</span><span class="token punctuation">&gt;</span></span></code> the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span><span class="token punctuation">&gt;</span></span></code></li>
+<li>Decorate your <code>App</code> with your routes<pre><code class="lang-js">@<span class="token function">RouteConfig</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+<span class="token punctuation">{</span>path<span class="token punctuation">:</span> <span class="token string">&apos;/home&apos;</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">&apos;Home&apos;</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Home<span class="token punctuation">,</span> useAsDefault<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">{</span>path<span class="token punctuation">:</span> <span class="token string">&apos;/party&apos;</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">&apos;Party&apos;</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Party<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">{</span>path<span class="token punctuation">:</span> <span class="token string">&apos;/**&apos;</span><span class="token punctuation">,</span> redirectTo<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;Home&apos;</span><span class="token punctuation">]</span> <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li>Create a nav with <code>[routerLink]</code><pre><code class="lang-js"><span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;nav nav-tabs&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;nav-item&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>a <span class="token punctuation">[</span>routerLink<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;[&apos;Home&apos;]&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;nav-link&quot;</span><span class="token operator">&gt;</span>Home<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;nav-item&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>a <span class="token punctuation">[</span>routerLink<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;[&apos;Party&apos;]&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;nav-link&quot;</span><span class="token operator">&gt;</span>Party<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+</code></pre>
+</li>
+<li>Stylize the active route with a <code>.router-link-active</code> style:<pre><code class="lang-css"><span class="token selector">.router-link-active</span><span class="token punctuation">{</span>
+<span class="token property">color</span><span class="token punctuation">:</span> #55595c<span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token property">border-color</span><span class="token punctuation">:</span> #ddd #ddd transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="challenges-solutions-not-included">Challenges (Solutions Not Included!)</h2>
+<p>The following are for people who enjoy a challenge and working ahead.</p>
+<h3 id="challenge">Challenge</h3>
+<p>Create a second service with a route to manage who you &quot;Add&quot; to the Party.</p>
+<h3 id="moderate-challenge">Moderate Challenge</h3>
+<p>Add create, read, update, delete to the &quot;Party&quot; service
+so you can add, remove, edit people to the party. Also make
+sure you can&apos;t add the same Person to the party twice.</p>
+<h3 id="difficult-challenge">Difficult Challenge</h3>
+<p>Create a &quot;PersonDetail&quot; component and route so that when you
+click on the Person image, it navigates to a route displaying
+Person&apos;s detail <em>including</em> all the images of starships they&apos;ve
+flown <img align="absmiddle" alt=":wink:" class="emoji" src="gitbook/gitbook-plugin-advanced-emoji/emojis/wink.png" title=":wink:"></p>
+<h3 id="difficult-challenge">Difficult Challenge</h3>
+<p>Build an &quot;Autocomplete&quot; search box from the Star Wars api.
+Prior RxJS knowledge is recommended.</p>
+<h3 id="super-duper-tough-challenge">Super Duper Tough Challenge</h3>
+<p>Build a full Create, Read, Update, Delete app (the api supports it!)
+with the people from Star Wars including all of the features above!</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+        </div>
+        <div class="no-results">
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="routing/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 10. Routing">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"The numbers folders 01-10 can be renamed at any time to catch up.\nFor example, rename 07 to src then restart your npm start to\ncatch up to Exercise 7.","title":"Exercises","next":null,"previous":{"level":"11","title":"10. Routing","depth":1,"path":"routing/README.md","anchor":null},"level":"12","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"exercises.md","mtime":"2016-05-02T21:26:38.917Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-02T21:32:55.503Z","generator":"website"},"basePath":".","book":{}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,457 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>09. Pipes · Angular 2 Workshop Handbook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="If you&#39;re coming from Angular 1, you&#39;ll soon notice the lack of
+a filter pipe and others that you may have come to rely on.
+Fortunately, pipes are extremely easy to create and share. Personally,
+I expect a large library of reusable Angular 2 pipes to be coming in 
+the future.">
+        <meta name="generator" content="GitBook 3.0.0-pre.9">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../routing/" />
+    
+    
+    <link rel="prev" href="../http/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        
+        <nav role="navigation">
+            <ul class="summary">
+                
+                
+
+                
+
+                
+                    
+                    
+    
+        <li class="chapter " data-level="0" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="../new-project/">
+            
+                <a href="../new-project/">
+            
+                    
+                    00. New Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="../hello-world/">
+            
+                <a href="../hello-world/">
+            
+                    
+                    01. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="../first-component/">
+            
+                <a href="../first-component/">
+            
+                    
+                    02. First Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="../events-and-refs/">
+            
+                <a href="../events-and-refs/">
+            
+                    
+                    03. Events and Refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="../smart-and-dumb-components/">
+            
+                <a href="../smart-and-dumb-components/">
+            
+                    
+                    04. Smart and Dumb Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="../built-in-directives/">
+            
+                <a href="../built-in-directives/">
+            
+                    
+                    05. Built-in Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="../ngFor/">
+            
+                <a href="../ngFor/">
+            
+                    
+                    06. Repeating Elements with ngFor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="../injecting-services/">
+            
+                <a href="../injecting-services/">
+            
+                    
+                    07. Injecting Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    08. Loading Data with Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    09. Pipes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="../routing/">
+            
+                <a href="../routing/">
+            
+                    
+                    10. Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="../exercises.html">
+            
+                <a href="../exercises.html">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+                
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                        Published with GitBook
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >09. Pipes</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pipes">Pipes</h1>
+<h2 id="tldr">TL;DR</h2>
+<ul>
+<li>Decorate a <code>class</code> with <code>@Pipe</code></li>
+<li><code>name</code> your pipe</li>
+<li>Add a <code>transform</code> method to your pipe</li>
+<li><code>transform</code> is invoked with <code>(input, arg1, arg2, etc)</code></li>
+<li>Return whatever output you&apos;d like from the pipe</li>
+<li>Include the pipe in your Component <code>pipes:[]</code></li>
+<li>Use your pipe in the template <code>{{data | myPipe:arg1:arg2}}</code> </li>
+</ul>
+<h2 id="pipes">Pipes</h2>
+<p>If you&apos;re coming from Angular 1, you&apos;ll soon notice the lack of
+a <code>filter</code> pipe and others that you may have come to rely on.
+Fortunately, pipes are extremely easy to create and share. Personally,
+I expect a large library of reusable Angular 2 pipes to be coming in 
+the future.</p>
+<h3 id="json-pipe"><code>| json</code> Pipe</h3>
+<p>The <code>| json</code> pipe is extremely helpful for debugging in templates.</p>
+<pre><code class="lang-js"><span class="token punctuation">{</span><span class="token punctuation">{</span>myObject <span class="token operator">|</span> json<span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<h3 id="built-in-formatting-pipes">Built-in Formatting Pipes</h3>
+<p><code>| date</code>, <code>| uppercase</code>, <code>| lowercase</code>, <code>| currency</code>, <code>| percent</code> are
+all available to format your template expressions:</p>
+<pre><code class="lang-html">{{ birthday | date:&quot;MM/dd/yy&quot; }}
+</code></pre>
+<h3 id="chaining-pipes">Chaining Pipes</h3>
+<p>Pipes can be used one after the other. The output of the previous pipe 
+will be used as the input for the next:</p>
+<pre><code class="lang-html"><span class="token comment" spellcheck="true">&lt;!-- Results in something like &quot;MONDAY, MAY 2, 2016 --&gt;</span>
+{{ birthday | date | uppercase}}
+</code></pre>
+<h3 id="custom-pipes">Custom Pipes</h3>
+<p>You create a custom pipe using a <code>@Pipe()</code> decorator on a class.
+The <code>@Pipe()</code> requires a <code>name</code>, then you simply create a <code>transform</code>
+method that will take your template variable as input, then output
+whatever you return. Often, you&apos;re either formatting a string or 
+manipulating an array.</p>
+<h2 id="show-me-the-code">Show Me the Code</h2>
+<pre><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>Pipe<span class="token punctuation">}</span> from <span class="token string">&apos;angular2/core&apos;</span><span class="token punctuation">;</span>
+@<span class="token function">Pipe</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">&apos;search&apos;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Search</span><span class="token punctuation">{</span>
+  <span class="token function">transform</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> key<span class="token punctuation">,</span> term <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>data<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> data<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> item<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>term<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre><code class="lang-js">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  selector<span class="token punctuation">:</span> <span class="token string">&apos;person-list&apos;</span><span class="token punctuation">,</span>
+  directives<span class="token punctuation">:</span> <span class="token punctuation">[</span>Card<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">//include your pipe</span>
+  pipes<span class="token punctuation">:</span><span class="token punctuation">[</span>Search<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> `
+<span class="token operator">&lt;</span>input <span class="token punctuation">[</span><span class="token punctuation">(</span>ngModel<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;name&quot;</span> type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span><span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;card-container&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>card
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> use your pipe <span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token operator">*</span>ngFor<span class="token operator">=</span><span class="token string">&quot;#person of people | search:&apos;name&apos;:name&quot;</span>
+    <span class="token punctuation">[</span>person<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">&quot;person&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>card<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+`
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">PersonList</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+        </div>
+        <div class="no-results">
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../http/" class="navigation navigation-prev " aria-label="Previous page: 08. Loading Data with Http">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../routing/" class="navigation navigation-next " aria-label="Next page: 10. Routing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"If you're coming from Angular 1, you'll soon notice the lack of\na filter pipe and others that you may have come to rely on.\nFortunately, pipes are extremely easy to create and share. Personally,\nI expect a large library of reusable Angular 2 pipes to be coming in \nthe future.","title":"09. Pipes","next":{"level":"11","title":"10. Routing","depth":1,"path":"routing/README.md","anchor":null},"previous":{"level":"9","title":"08. Loading Data with Http","depth":1,"path":"http/README.md","anchor":null},"level":"10","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pipes/README.md","mtime":"2016-05-02T21:03:57.147Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-02T21:32:55.503Z","generator":"website"},"basePath":"..","book":{}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,486 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>10. Routing · Angular 2 Workshop Handbook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Don&#39;t forget to include this in the &lt;head&gt; of your index.html, or else routing
+won&#39;t know where to start:">
+        <meta name="generator" content="GitBook 3.0.0-pre.9">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../exercises.html" />
+    
+    
+    <link rel="prev" href="../pipes/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        
+        <nav role="navigation">
+            <ul class="summary">
+                
+                
+
+                
+
+                
+                    
+                    
+    
+        <li class="chapter " data-level="0" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="../new-project/">
+            
+                <a href="../new-project/">
+            
+                    
+                    00. New Project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="../hello-world/">
+            
+                <a href="../hello-world/">
+            
+                    
+                    01. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="../first-component/">
+            
+                <a href="../first-component/">
+            
+                    
+                    02. First Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="../events-and-refs/">
+            
+                <a href="../events-and-refs/">
+            
+                    
+                    03. Events and Refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="../smart-and-dumb-components/">
+            
+                <a href="../smart-and-dumb-components/">
+            
+                    
+                    04. Smart and Dumb Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="../built-in-directives/">
+            
+                <a href="../built-in-directives/">
+            
+                    
+                    05. Built-in Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="../ngFor/">
+            
+                <a href="../ngFor/">
+            
+                    
+                    06. Repeating Elements with ngFor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="../injecting-services/">
+            
+                <a href="../injecting-services/">
+            
+                    
+                    07. Injecting Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    08. Loading Data with Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="../pipes/">
+            
+                <a href="../pipes/">
+            
+                    
+                    09. Pipes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="11" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    10. Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="../exercises.html">
+            
+                <a href="../exercises.html">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+                
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                        Published with GitBook
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >10. Routing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="routing">Routing</h1>
+<h2 id="tldr">TL;DR</h2>
+<ul>
+<li>Routing is <strong><em>very</em></strong> configuration heavy, be patient <img align="absmiddle" alt=":smile:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/smile.png" title=":smile:"></li>
+<li>Configure routes for your components by decorating with <code>@RouteConfig</code></li>
+<li>Define <code>routes</code> like <code>{path: &apos;/party&apos;, name: &apos;Party&apos;, component: Party}</code></li>
+<li>The <code>router</code> loads a component into the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span><span class="token punctuation">&gt;</span></span></code></li>
+<li>Route to a <code>name</code> with <code>[routerLink]=&quot;[&apos;Party&apos;]&quot;</code></li>
+<li>You build routes in a confusing array syntax: <code>[routerLink]=&quot;[&apos;/ChildItem&apos;, {id: &apos;someId&apos;}, &apos;SubItem1&apos;, {itemName: &apos;someName&apos;}]</code></li>
+</ul>
+<h2 id="base-href"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>base</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span></code></h2>
+<p>Don&apos;t forget to include this in the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span></code> of your <code>index.html</code>, or else routing
+won&apos;t know where to start:</p>
+<pre><code class="lang-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>base</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h2 id="routeconfig"><code>@RouteConfig()</code></h2>
+<p>With <code>@RouteConfig()</code> your <code>App Component</code> basically becomes a target
+for where the <code>router</code> will render components.</p>
+<p>So an <code>App</code> component will typically have:</p>
+<ul>
+<li>Navigation</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span><span class="token punctuation">&gt;</span></span></code> (where your components are loaded)</li>
+<li>Header/Footer/etc</li>
+</ul>
+<p>Decorator your <code>App</code> component with your root routes so that when your
+application loads, it knows which components to load. Loading a <code>Home</code>
+component would look like:</p>
+<pre><code class="lang-js">  @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//selector, template, etc</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  @<span class="token function">RouteConfig</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>path<span class="token punctuation">:</span> <span class="token string">&apos;/home&apos;</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">&apos;Home&apos;</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Home<span class="token punctuation">,</span> useAsDefault<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">}</span>   
+  <span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<h3 id="gotcha"><img align="absmiddle" alt=":warning:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:"> Gotcha</h3>
+<p>Notice how the <code>App</code> is decorated with <strong><em>both</em></strong> <code>@Component</code> AND <code>@RouteConfig</code>.
+The nature of decorators allows you to stack them one on top of the other as long
+as the code immediately following is something that can be decorated, e.g. a <code>class</code>.</p>
+<h2 id="router-outlet"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span><span class="token punctuation">&gt;</span></span></code></h2>
+<p>Now you need somewhere to render out your <code>Home</code> component.</p>
+<p>Compare using the <code>Home</code> component as a directive:</p>
+<pre><code class="lang-js">  @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//selector, etc</span>
+        directives<span class="token punctuation">:</span> <span class="token punctuation">[</span>Home<span class="token punctuation">]</span><span class="token punctuation">,</span>
+        template<span class="token punctuation">:</span>`
+            <span class="token operator">&lt;</span>home<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>home<span class="token operator">&gt;</span>
+        `
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<p>Vs. loading the <code>Home</code> component as a <code>route</code>:</p>
+<pre><code class="lang-js">  @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//selector, etc</span>
+        template<span class="token punctuation">:</span>`
+            <span class="token operator">&lt;</span>router<span class="token operator">-</span>outlet<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>outlet<span class="token operator">&gt;</span>
+        `
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  @<span class="token function">RouteConfig</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>path<span class="token punctuation">:</span> <span class="token string">&apos;/home&apos;</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">&apos;Home&apos;</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Home<span class="token punctuation">,</span> useAsDefault<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">}</span>   
+  <span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">App</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<h3 id="routerlink"><code>[routerLink]</code></h3>
+<p>Using <code>[routerLink]</code> directive allows you to hook into the routing system
+from your template. To navigate to your <code>Home</code> component, you add a
+<code>[routerLink]</code> that looks like the following:</p>
+<pre><code class="lang-html">&lt;a [routerLink]=&quot;[&apos;Home&apos;]&quot;&gt;Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h3 id="router-link-active"><code>.router-link-active</code></h3>
+<p><code>.router-link-active</code> is a style that is automatically applied added to
+an element with <code>[routerLink]</code> defined when that link is active. This is
+<em>great</em> for highlighting in navigation.</p>
+<h3 id="and-beyond">And Beyond...</h3>
+<p>Going in-depth into router is outside the scope of this workshop, but
+the general gist through code samples:</p>
+<pre><code class="lang-js">  @<span class="token function">RouteConfig</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token comment" spellcheck="true">//&quot;...&quot; allows &quot;children&quot;</span>
+    <span class="token punctuation">{</span>path<span class="token punctuation">:</span> <span class="token string">&apos;/person/...&apos;</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">&apos;Person&apos;</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Person<span class="token punctuation">}</span>   
+  <span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">//The Person component would *also* have a `@RouteConfig()` to handle its children </span>
+@<span class="token function">RouteConfig</span><span class="token punctuation">(</span><span class="token punctuation">[</span>    
+    <span class="token comment" spellcheck="true">// the &quot;/&quot; signifies a &quot;terminal&quot; route. These are required so the route </span>
+    <span class="token comment" spellcheck="true">//at least stops somewhere</span>
+    <span class="token punctuation">{</span>path<span class="token punctuation">:</span> <span class="token string">&apos;/detail/&apos;</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">&apos;Detail&apos;</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Detail<span class="token punctuation">}</span>   
+  <span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+<p>A param in a route:</p>
+<pre><code class="lang-html"> { path: &apos;/person/:id/&apos;, component: Person, name: &apos;Person&apos; },
+</code></pre>
+<p>Matches up with a param in a constructor:</p>
+<pre><code class="lang-js"><span class="token function">constructor</span><span class="token punctuation">(</span>params<span class="token punctuation">:</span> RouteParams<span class="token punctuation">)</span> <span class="token punctuation">{</span>    
+    <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> params<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;id&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The router has &quot;lifecycle hook&quot; decorators to allow or prevent navigation:</p>
+<h3 id="canactivate-onactivate-candeactivate"><code>@CanActivate</code>, <code>@OnActivate</code>, <code>@CanDeactivate</code></h3>
+<pre><code class="lang-js"><span class="token comment" spellcheck="true">//Takes a function invoked with the &quot;next&quot; route and the &quot;previous&quot; route.</span>
+<span class="token comment" spellcheck="true">//Return a boolean or a Promise that resolves to a boolean.</span>
+@<span class="token function">CanActivate</span><span class="token punctuation">(</span><span class="token punctuation">(</span>next<span class="token punctuation">,</span> prev<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> boolean <span class="token operator">|</span> Promise<span class="token operator">&lt;</span>boolean<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+        </div>
+        <div class="no-results">
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../pipes/" class="navigation navigation-prev " aria-label="Previous page: 09. Pipes">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../exercises.html" class="navigation navigation-next " aria-label="Next page: Exercises">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Don't forget to include this in the <head> of your index.html, or else routing\nwon't know where to start:","title":"10. Routing","next":{"level":"12","title":"Exercises","depth":1,"path":"exercises.md","anchor":null},"previous":{"level":"10","title":"09. Pipes","depth":1,"path":"pipes/README.md","anchor":null},"level":"11","depth":1,"dir":"ltr"},"config":{"gitbook":"3.0.0-pre.9","plugins":[{"name":"include-codeblock","version":""},{"name":"advanced-emoji","version":""},{"name":"prism","version":""},{"name":"copy-code-button","version":""},{"name":"search"},{"name":"lunr"},{"name":"sharing"},{"name":"fontsettings"},{"name":"theme-default"}],"theme":"default","variables":{},"pluginsConfig":{"include-codeblock":{},"advanced-emoji":{"embedEmojis":false},"prism":{},"copy-code-button":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"title":"Angular 2 Workshop Handbook","description":"Hi! Welcome to the Angular 2 Handbook! This book will get you\nstarted on the path to becoming an Angular 2 expert :thumbsup:.","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"routing/README.md","mtime":"2016-05-02T20:25:57.865Z","type":"markdown"},"gitbook":{"version":"3.0.0-pre.9","time":"2016-05-02T21:32:55.503Z","generator":"website"},"basePath":"..","book":{}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

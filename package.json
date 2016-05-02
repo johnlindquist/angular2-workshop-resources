@@ -1,14 +1,13 @@
 {
-  "name": "starwars-json-server",
+  "name": "angular2-workshop-resources",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnlindquist/swapi-json-server.git"
+    "url": "git+https://github.com/johnlindquist/angular2-workshop-resources.git"
   },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./app.js"
   },
   "keywords": [],
